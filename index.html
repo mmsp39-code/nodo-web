@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nodo · Bots con IA para negocios locales | Valencia, España</title>
   <meta name="description" content="Automatiza tu negocio con bots inteligentes de WhatsApp y Telegram. Reservas, recordatorios y atención al cliente 24/7 para clínicas, peluquerías, restaurantes y más. Sin programar. Valencia, España.">
-  <meta name="keywords" content="bot whatsapp negocios, chatbot telegram españa, automatización negocios locales, bot reservas clínica, bot peluquería whatsapp, bot restaurante, inteligencia artificial negocios valencia, chatbot sin código">
+  <meta name="keywords" content="bot whatsapp negocios locales, chatbot telegram españa, automatización negocios, bot reservas citas, bot taller mecánico, bot peluquería, bot restaurante, bot bar, bot lavandería, bot inmobiliaria, bot gimnasio, inteligencia artificial negocios valencia, chatbot sin código, automatización whatsapp telegram">
   <meta name="author" content="Nodo Bots">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.nodobots.com/">
@@ -40,7 +40,8 @@
       "addressLocality": "Valencia",
       "addressCountry": "ES"
     },
-    "serviceType": ["Chatbot", "Automatización WhatsApp", "Bot Telegram", "Inteligencia Artificial"],
+    "serviceType": ["Chatbot WhatsApp", "Bot Telegram", "Automatización negocios locales", "Bot reservas y citas", "Bot atención al cliente 24/7", "Bot pedidos y delivery", "Inteligencia Artificial para negocios", "Recordatorios automáticos"],
+    "knowsAbout": ["talleres mecánicos", "peluquerías", "restaurantes", "bares", "lavanderías", "inmobiliarias", "gimnasios", "clínicas", "dentistas", "estética", "comercios locales"],
     "offers": [
       {
         "@type": "Offer",
@@ -157,6 +158,26 @@
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
       transition: background 0.3s;
+    }
+
+    /* ── LOGO HERO ── */
+    .hero-logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .hero-logo-img {
+      width: min(340px, 70vw);
+      height: auto;
+      border-radius: 12px;
+      filter: drop-shadow(0 0 32px rgba(139,92,246,0.25));
+    }
+
+    /* ── LOGO NAVBAR ── */
+    .nav-logo-img {
+      height: 36px;
+      width: auto;
+      border-radius: 6px;
     }
 
     .nav-logo {
@@ -1398,8 +1419,7 @@
 ════════════════════════════════════════ -->
 <nav>
   <a href="#hero" class="nav-logo">
-    <div class="nav-logo-icon">⬡</div>
-    Nodo
+    <img src="nodobots-logo.png" alt="NodoBots" class="nav-logo-img">
   </a>
 
   <ul class="nav-links">
@@ -1433,6 +1453,9 @@
      HERO
 ════════════════════════════════════════ -->
 <section id="hero">
+  <div class="hero-logo-wrap">
+    <img src="nodobots-logo.png" alt="NodoBots – Bots con inteligencia artificial para negocios locales: talleres, bares, peluquerías, restaurantes, clínicas y más. Valencia, España" class="hero-logo-img">
+  </div>
   <div class="hero-badge">
     <span class="dot"></span>
     Bots con IA · Made in Valencia
@@ -1454,10 +1477,9 @@
   </div>
 
   <div class="hero-social-proof">
-    <span class="stars">★★★★★</span>
-    <span>4.9 / 5</span>
+    <span>✅ Bot funcional y probado</span>
     <span class="proof-sep">·</span>
-    <span>Negocios locales automatizados</span>
+    <span>Demo disponible ahora mismo</span>
     <span class="proof-sep">·</span>
     <span>Valencia, España</span>
   </div>
@@ -1512,10 +1534,10 @@
         <div class="cal-num">15</div>
       </div>
       <div class="cal-events">
-        <div class="cal-event v">Pablo G. — Lumbar · 16:00</div>
-        <div class="cal-event c">Carmen T. — Hombro · 16:00</div>
-        <div class="cal-event g">Javier P. — Rodilla · 17:00</div>
-        <div class="cal-event v">Inés V. — Espalda · 17:00</div>
+        <div class="cal-event v">Pablo G. — Reserva · 16:00</div>
+        <div class="cal-event c">Carmen T. — Cita · 16:00</div>
+        <div class="cal-event g">Javier P. — Servicio · 17:00</div>
+        <div class="cal-event v">Inés V. — Cita · 17:00</div>
       </div>
     </div>
   </div>
@@ -2037,21 +2059,22 @@
     <div class="stats-grid">
       <div class="stat-card reveal">
         <div class="stat-num" data-target="80">0%</div>
-        <div class="stat-label">Reducción de<br>no-presentaciones</div>
+        <div class="stat-label">Menos citas<br>no presentadas*</div>
       </div>
       <div class="stat-card reveal">
         <div class="stat-num" data-target="24" data-suffix="h">0h</div>
         <div class="stat-label">Atención al cliente<br>sin descanso</div>
       </div>
       <div class="stat-card reveal">
-        <div class="stat-num" data-target="48" data-suffix="h">0h</div>
-        <div class="stat-label">Tiempo medio hasta<br>primera versión</div>
+        <div class="stat-num" data-target="7" data-suffix=" días">0 días</div>
+        <div class="stat-label">De cero a bot<br>en producción</div>
       </div>
       <div class="stat-card reveal">
-        <div class="stat-num" data-target="100" data-suffix="%">0%</div>
-        <div class="stat-label">Personalizado para<br>tu negocio</div>
+        <div class="stat-num" data-target="0" data-suffix="€">0€</div>
+        <div class="stat-label">Coste de la<br>demo inicial</div>
       </div>
     </div>
+    <p style="text-align:center;font-size:0.75rem;color:var(--text3);margin-top:1rem;">* Media del sector con recordatorios automáticos activos</p>
   </div>
 </section>
 
@@ -2265,8 +2288,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <a href="#hero" class="nav-logo" style="margin-bottom:0.8rem; display:inline-flex;">
-          <div class="nav-logo-icon">⬡</div>
-          Nodo
+          <img src="nodobots-logo.png" alt="NodoBots" class="nav-logo-img">
         </a>
         <p>Automatización inteligente para negocios locales. Bots de WhatsApp y Telegram que trabajan mientras tú descansas.</p>
       </div>
@@ -2291,9 +2313,9 @@
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="#">Aviso legal</a></li>
-          <li><a href="#">Privacidad</a></li>
-          <li><a href="#">Cookies</a></li>
+          <li><a href="#" onclick="openModal('modal-legal');return false;">Aviso legal</a></li>
+          <li><a href="#" onclick="openModal('modal-privacidad');return false;">Privacidad</a></li>
+          <li><a href="#" onclick="openModal('modal-cookies');return false;">Cookies</a></li>
         </ul>
       </div>
     </div>
@@ -2324,7 +2346,7 @@
      COOKIE BANNER
 ════════════════════════════════════════ -->
 <div id="cookie-banner">
-  <p>Usamos cookies propias para analizar el tráfico y mejorar tu experiencia. <a href="#">Más información</a></p>
+  <p>Usamos cookies propias para analizar el tráfico y mejorar tu experiencia. <a href="#" onclick="openModal('modal-cookies');return false;">Más información</a></p>
   <div class="cookie-btns">
     <button class="btn-cookie-decline" id="cookie-decline">Rechazar</button>
     <button class="btn-cookie-accept" id="cookie-accept">Aceptar</button>
@@ -2402,11 +2424,19 @@ let demoState = {
   pendingDay: null,
   pendingMonth: null,
   pendingHour: null,
+  pendingService: null,
   userName: null,
   userPhone: null
 };
 
-const DEMO_TRATAMIENTOS = ['Lumbar', 'Cervical', 'Hombro', 'Rodilla', 'Espalda'];
+const DEMO_SERVICIOS = {
+  clinica:    { label: 'Tratamiento', items: ['Sesión fisioterapia', 'Masaje relajante', 'Punción seca', 'Rehabilitación', 'Valoración inicial'] },
+  peluqueria: { label: 'Servicio',    items: ['Corte y secado', 'Tinte', 'Mechas', 'Balayage', 'Manicura', 'Peinado especial'] },
+  restaurante:{ label: 'Reserva',     items: ['Mesa para 2', 'Mesa para 4', 'Mesa para 6', 'Mesa para 8', 'Evento privado'] },
+  lavanderia: { label: 'Servicio',    items: ['Lavado y secado', 'Planchado', 'Limpieza en seco', 'Edredón', 'Recogida a domicilio'] },
+  estetica:   { label: 'Tratamiento', items: ['Manicura', 'Pedicura', 'Depilación láser', 'Facial hidratante', 'Diseño de cejas'] },
+  dentista:   { label: 'Tratamiento', items: ['Revisión y limpieza', 'Empaste', 'Blanqueamiento', 'Ortodoncia', 'Implante'] }
+};
 
 // ── CALENDARIO ──
 const MESES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
@@ -2547,7 +2577,9 @@ function confirmBooking() {
   const hour = demoState.pendingHour;
   const name = demoState.userName;
   const phone = demoState.userPhone;
-  const trat = DEMO_TRATAMIENTOS[Math.floor(Math.random() * DEMO_TRATAMIENTOS.length)];
+  const servicioData = DEMO_SERVICIOS[sectorActual] || DEMO_SERVICIOS.clinica;
+  const trat = demoState.pendingService || servicioData.items[Math.floor(Math.random() * servicioData.items.length)];
+  const tratLabel = servicioData.label;
   const key = getKey(calYear, month, day);
 
   if (!existingBookings[key]) existingBookings[key] = [];
@@ -2560,7 +2592,7 @@ function confirmBooking() {
   // Mostrar tarjeta de confirmación
   const card = document.getElementById('booking-card');
   document.getElementById('booking-data').textContent = `${name} · ${day} de ${MESES[month]} · ${hour}`;
-  document.getElementById('booking-sub').textContent = `Tel: ${phone} · Tratamiento: ${trat} · Recordatorio programado`;
+  document.getElementById('booking-sub').textContent = `Tel: ${phone} · ${tratLabel}: ${trat} · Recordatorio programado`;
   card.classList.add('show');
 
   // Borde cyan en el panel cal
@@ -2684,6 +2716,7 @@ function processMessage(text) {
 
     case 'sintoma':
       demoState.step = 'preguntando-dia';
+      demoState.pendingService = 'Valoración inicial';
       showBotTyping(() => addPanelMsg('Entendido. Para ese tipo de molestia te recomendamos una valoración inicial con nuestro especialista. ¿Qué día te viene bien? Selecciónalo en el calendario.', 'bot'));
       break;
 
@@ -2912,7 +2945,7 @@ function setSector(btn) {
   document.querySelector('.panel-name').textContent = s.nombre.split('·')[0].trim() + ' · Bot IA';
   const msgs = document.getElementById('panel-msgs');
   msgs.innerHTML = `<div class="msg bot">${s.bienvenida}</div>`;
-  demoState = { step:'inicio', pendingDay:null, pendingMonth:null, pendingHour:null, userName:null, userPhone:null };
+  demoState = { step:'inicio', pendingDay:null, pendingMonth:null, pendingHour:null, pendingService:null, userName:null, userPhone:null };
   document.getElementById('booking-card').classList.remove('show');
   buildGcal(sectorActual);
 }
@@ -2944,6 +2977,161 @@ window.addEventListener('scroll', () => {
     nav.style.background = 'rgba(9,9,11,0.75)';
   }
 });
+</script>
+
+<!-- ═══════════════════════════════════════
+     MODALES LEGALES
+════════════════════════════════════════ -->
+
+<!-- Overlay -->
+<div id="modal-overlay" onclick="closeModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9998;backdrop-filter:blur(4px);"></div>
+
+<!-- AVISO LEGAL -->
+<div id="modal-legal" class="legal-modal" style="display:none;">
+  <button class="modal-close" onclick="closeModal()">✕</button>
+  <h2>Aviso Legal</h2>
+  <p><strong>Titular del sitio web:</strong> Marcos Miguel Signes Peretó</p>
+  <p><strong>Correo electrónico:</strong> mmsp39@gmail.com</p>
+  <p><strong>Teléfono:</strong> 620 502 131</p>
+  <p><strong>Domicilio:</strong> Valencia, España</p>
+  <p><strong>Actividad:</strong> Servicios de automatización e inteligencia artificial para negocios</p>
+
+  <h3>Condiciones de uso</h3>
+  <p>El acceso y uso de este sitio web (nodobots.com) atribuye la condición de usuario e implica la aceptación de las presentes condiciones. Marcos Miguel Signes Peretó se reserva el derecho a modificar, en cualquier momento y sin previo aviso, la presentación y configuración del sitio web.</p>
+
+  <h3>Propiedad intelectual</h3>
+  <p>Todos los contenidos del sitio web, incluyendo textos, imágenes, diseño gráfico y código fuente, son propiedad de Marcos Miguel Signes Peretó o de terceros que han autorizado su uso. Queda prohibida su reproducción, distribución o comunicación pública sin autorización expresa.</p>
+
+  <h3>Responsabilidad</h3>
+  <p>El titular no se hace responsable de los daños o perjuicios derivados del uso del sitio web ni de la información contenida en el mismo. Los enlaces a terceros se facilitan únicamente como recurso informativo y no implican ningún tipo de respaldo.</p>
+
+  <h3>Legislación aplicable</h3>
+  <p>Las presentes condiciones se rigen por la legislación española. Para cualquier controversia derivada del uso de este sitio web, las partes se someten a los juzgados y tribunales de Valencia.</p>
+</div>
+
+<!-- POLÍTICA DE PRIVACIDAD -->
+<div id="modal-privacidad" class="legal-modal" style="display:none;">
+  <button class="modal-close" onclick="closeModal()">✕</button>
+  <h2>Política de Privacidad</h2>
+  <p>En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), te informamos sobre el tratamiento de tus datos personales.</p>
+
+  <h3>Responsable del tratamiento</h3>
+  <p><strong>Identidad:</strong> Marcos Miguel Signes Peretó<br>
+  <strong>Correo:</strong> mmsp39@gmail.com<br>
+  <strong>Teléfono:</strong> 620 502 131<br>
+  <strong>Ubicación:</strong> Valencia, España</p>
+
+  <h3>Datos que recopilamos</h3>
+  <p>A través del formulario de contacto recopilamos: nombre, teléfono, correo electrónico, sector de actividad y descripción del proyecto. Estos datos se almacenan en Google Forms y se usan exclusivamente para contactarte y ofrecerte información sobre nuestros servicios.</p>
+
+  <h3>Finalidad y base legal</h3>
+  <p>El tratamiento de tus datos tiene como finalidad atender tu solicitud de información o demo (base legal: consentimiento del interesado, art. 6.1.a RGPD). No usamos tus datos para ningún otro fin sin tu consentimiento explícito.</p>
+
+  <h3>Conservación</h3>
+  <p>Tus datos se conservan mientras exista una relación comercial o durante el tiempo necesario para atender tu solicitud, y en todo caso durante los plazos legalmente exigidos.</p>
+
+  <h3>Destinatarios</h3>
+  <p>No cedemos tus datos a terceros, salvo obligación legal. Usamos Google Forms como herramienta de recogida de datos, sujeta a las políticas de privacidad de Google LLC.</p>
+
+  <h3>Tus derechos</h3>
+  <p>Tienes derecho a acceder, rectificar, suprimir, oponerte y solicitar la portabilidad de tus datos. Puedes ejercerlos escribiendo a mmsp39@gmail.com. También puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
+</div>
+
+<!-- POLÍTICA DE COOKIES -->
+<div id="modal-cookies" class="legal-modal" style="display:none;">
+  <button class="modal-close" onclick="closeModal()">✕</button>
+  <h2>Política de Cookies</h2>
+  <p>Este sitio web utiliza cookies propias con finalidad técnica y analítica. A continuación te explicamos qué cookies usamos y para qué.</p>
+
+  <h3>¿Qué es una cookie?</h3>
+  <p>Una cookie es un pequeño archivo de texto que se almacena en tu dispositivo cuando visitas una web. Permite recordar tus preferencias y mejorar tu experiencia de navegación.</p>
+
+  <h3>Cookies que utilizamos</h3>
+  <p><strong>Cookies propias técnicas:</strong> Necesarias para el correcto funcionamiento del sitio (recordar si has aceptado las cookies, por ejemplo). No requieren consentimiento.</p>
+  <p><strong>Cookies analíticas:</strong> Usamos datos de navegación de forma agregada y anónima para entender cómo se usa el sitio y mejorarlo. No se identifican usuarios individuales.</p>
+
+  <h3>Cómo gestionar las cookies</h3>
+  <p>Puedes aceptar o rechazar las cookies usando los botones del banner que aparece al entrar. También puedes configurar tu navegador para bloquearlas o eliminarlas:</p>
+  <p>• <strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies<br>
+  • <strong>Firefox:</strong> Opciones → Privacidad y seguridad<br>
+  • <strong>Safari:</strong> Preferencias → Privacidad</p>
+
+  <h3>Más información</h3>
+  <p>Para cualquier consulta sobre el uso de cookies en este sitio puedes contactarnos en mmsp39@gmail.com.</p>
+</div>
+
+<!-- CSS + JS MODALES -->
+<style>
+.legal-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: #1C1C28;
+  border: 1px solid rgba(139,92,246,0.3);
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 680px;
+  width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: #F4F4F5;
+  font-family: 'DM Sans', sans-serif;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+.legal-modal h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #8B5CF6;
+  margin-bottom: 1.2rem;
+  padding-right: 2rem;
+}
+.legal-modal h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #06B6D4;
+  margin: 1.2rem 0 0.4rem;
+}
+.legal-modal p {
+  font-size: 0.9rem;
+  color: #A1A1AA;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+.legal-modal strong { color: #F4F4F5; }
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(139,92,246,0.15);
+  border: none;
+  color: #A1A1AA;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(139,92,246,0.35); color: #fff; }
+</style>
+
+<script>
+function openModal(id) {
+  document.getElementById('modal-overlay').style.display = 'block';
+  document.getElementById(id).style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modal-overlay').style.display = 'none';
+  document.querySelectorAll('.legal-modal').forEach(m => m.style.display = 'none');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
 </script>
 
 </body>
