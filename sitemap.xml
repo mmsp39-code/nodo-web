@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página de Inicio / Hub principal -->
   <url>
     <loc>https://nodobots.com/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <!-- Landing de Fisioterapia -->
+  <url>
+    <loc>https://nodobots.com/fisios.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Landing de Clínicas Dentales -->
+  <url>
+    <loc>https://nodobots.com/dentistas.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Landing de Peluquerías -->
+  <url>
+    <loc>https://nodobots.com/peluquerias.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Landing de Restaurantes -->
+  <url>
+    <loc>https://nodobots.com/restaurantes.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Landing de Talleres Mecánicos -->
+  <url>
+    <loc>https://nodobots.com/talleres.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog de Automatización -->
+  <url>
+    <loc>https://nodobots.com/blog.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
