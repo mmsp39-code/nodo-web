@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot de WhatsApp para peluquerías: cómo llenar tu agenda sin coger el teléfono | Nodo</title>
+  <meta name="description" content="Descubre cómo un bot de WhatsApp puede automatizar las citas de tu peluquería, reducir los no-shows hasta un 80% y atender clientes a las 2 de la madrugada sin que toques el móvil.">
+  <meta name="author" content="Nodo Bots">
+  <meta name="keywords" content="bot whatsapp peluqueria, chatbot peluqueria españa, automatizar citas peluqueria, recordatorios citas peluqueria, bot reservas peluqueria valencia, whatsapp business peluqueria">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nodobots.com/bot-whatsapp-peluqueria.html">
+  <meta property="og:title" content="Bot de WhatsApp para peluquerías: cómo llenar tu agenda sin coger el teléfono">
+  <meta property="og:description" content="Cómo un bot de WhatsApp puede automatizar las citas de tu peluquería, reducir los no-shows hasta un 80% y atender clientes 24/7.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nodobots.com/bot-whatsapp-peluqueria.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Nodo Bots">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bot de WhatsApp para peluquerías: cómo llenar tu agenda sin coger el teléfono">
+  <meta name="twitter:description" content="Automatiza las citas de tu peluquería con WhatsApp. Sin llamadas, sin no-shows, sin complicaciones.">
+
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Bot de WhatsApp para peluquerías: cómo llenar tu agenda sin coger el teléfono",
+    "description": "Guía completa sobre cómo un bot de WhatsApp puede automatizar las citas de tu peluquería, reducir los no-shows y atender clientes 24/7.",
+    "author": {"@type": "Organization", "name": "Nodo Bots"},
+    "publisher": {"@type": "Organization", "name": "Nodo Bots", "url": "https://nodobots.com"},
+    "datePublished": "2026-06-04",
+    "dateModified": "2026-06-04",
+    "url": "https://nodobots.com/bot-whatsapp-peluqueria.html",
+    "inLanguage": "es"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-bg: #f9f8f6;
+      --color-surface: #ffffff;
+      --color-text: #1a1a1a;
+      --color-text-muted: #6b7280;
+      --color-accent: #2563eb;
+      --color-accent-light: #dbeafe;
+      --color-border: #e5e7eb;
+      --color-highlight: #fef9c3;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-editorial: 'Lora', serif;
+      --max-w: 740px;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid var(--color-border);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { height: 32px; }
+    .nav-logo span { font-weight: 800; font-size: 18px; color: var(--color-text); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--color-text-muted); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--color-accent); }
+    .nav-cta {
+      background: var(--color-accent);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .85; }
+
+    /* ── HERO ARTICLE ── */
+    .article-hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #3b82f6 100%);
+      padding: 72px 24px 80px;
+      text-align: center;
+    }
+    .article-hero .breadcrumb {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      margin-bottom: 20px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .article-hero .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    .article-hero .breadcrumb a:hover { color: #fff; }
+    .article-hero h1 {
+      font-family: var(--font-editorial);
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 600;
+      color: #fff;
+      max-width: 760px;
+      margin: 0 auto 20px;
+      line-height: 1.25;
+    }
+    .article-hero .subtitle {
+      color: rgba(255,255,255,0.85);
+      font-size: 18px;
+      max-width: 560px;
+      margin: 0 auto 32px;
+      font-weight: 400;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .article-meta span {
+      color: rgba(255,255,255,0.75);
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .badge {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    /* ── ARTICLE LAYOUT ── */
+    .article-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-accent);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .toc h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--color-text-muted);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 8px; }
+    .toc a { color: var(--color-accent); text-decoration: none; font-size: 15px; font-weight: 500; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* PROSE */
+    .prose p { margin-bottom: 24px; color: #374151; }
+    .prose h2 {
+      font-family: var(--font-editorial);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin: 52px 0 20px;
+      line-height: 1.3;
+      scroll-margin-top: 80px;
+    }
+    .prose h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 36px 0 14px;
+    }
+    .prose strong { color: var(--color-text); font-weight: 700; }
+    .prose ul, .prose ol { padding-left: 22px; margin-bottom: 24px; }
+    .prose li { margin-bottom: 10px; color: #374151; }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: var(--color-highlight);
+      border-left: 4px solid #ca8a04;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 32px 0;
+      font-size: 16px;
+      color: #713f12;
+      font-style: italic;
+      font-family: var(--font-editorial);
+    }
+
+    /* STAT CARDS */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .stat-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+    }
+    .stat-card .stat-num {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--color-accent);
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card .stat-label {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    /* CONVERSATION EXAMPLE */
+    .convo-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 32px 0;
+    }
+    .convo-box h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #15803d;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .msg { display: flex; flex-direction: column; margin-bottom: 12px; }
+    .msg.client { align-items: flex-end; }
+    .msg.bot { align-items: flex-start; }
+    .msg-bubble {
+      max-width: 85%;
+      padding: 10px 14px;
+      border-radius: 16px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .msg.client .msg-bubble { background: #dcfce7; color: #14532d; border-bottom-right-radius: 4px; }
+    .msg.bot .msg-bubble { background: #fff; border: 1px solid #d1fae5; color: #374151; border-bottom-left-radius: 4px; }
+    .msg-sender { font-size: 11px; color: #6b7280; margin-bottom: 4px; font-weight: 600; }
+
+    /* COMPARISON TABLE */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0;
+      font-size: 15px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+    .compare-table th {
+      background: var(--color-accent);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .compare-table td { padding: 12px 16px; border-bottom: 1px solid var(--color-border); color: #374151; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:nth-child(even) td { background: #f9fafb; }
+    .tick { color: #16a34a; font-weight: 700; }
+    .cross { color: #dc2626; font-weight: 700; }
+
+    /* CALLOUT */
+    .callout {
+      background: var(--color-accent-light);
+      border: 1px solid #bfdbfe;
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 36px 0;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .callout-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+    .callout-body h4 { font-size: 16px; font-weight: 700; color: #1e40af; margin-bottom: 6px; }
+    .callout-body p { color: #1e3a8a; font-size: 15px; margin: 0; }
+
+    /* STEP LIST */
+    .step-list { list-style: none; padding: 0; margin: 28px 0; }
+    .step-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      background: var(--color-accent);
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-content h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .step-content p { font-size: 15px; color: #374151; margin: 0; }
+
+    /* CTA BLOCK */
+    .cta-block {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      border-radius: 16px;
+      padding: 44px 40px;
+      text-align: center;
+      margin: 56px 0 0;
+    }
+    .cta-block h2 { font-family: var(--font-editorial); font-size: 28px; color: #fff; margin-bottom: 12px; }
+    .cta-block p { color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 28px; }
+    .cta-block a {
+      display: inline-block;
+      background: #fff;
+      color: var(--color-accent);
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .cta-block a:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+    .cta-sub { color: rgba(255,255,255,0.65) !important; font-size: 13px !important; margin-top: 14px !important; margin-bottom: 0 !important; }
+
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 14px;
+    }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    footer a:hover { color: #fff; }
+    footer .footer-logo { color: #fff; font-weight: 800; font-size: 18px; margin-bottom: 12px; display: block; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .article-hero { padding: 48px 20px 56px; }
+      .article-wrap { padding: 40px 20px 60px; }
+      .cta-block { padding: 32px 24px; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://nodobots.com/" class="nav-logo">
+      <img src="https://nodobots.com/nodobots-logo.png" alt="NodoBots">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://nodobots.com/fisios.html">Fisioterapia</a></li>
+      <li><a href="https://nodobots.com/dentistas.html">Clínicas Dentales</a></li>
+      <li><a href="https://nodobots.com/peluquerias.html">Peluquerías</a></li>
+      <li><a href="https://nodobots.com/restaurantes.html">Restaurantes</a></li>
+      <li><a href="https://nodobots.com/blog.html">Blog</a></li>
+    </ul>
+    <a href="https://nodobots.com/#contacto" class="nav-cta">Demo gratuita →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="article-hero">
+  <p class="breadcrumb">
+    <a href="https://nodobots.com/">Inicio</a> → <a href="https://nodobots.com/blog.html">Blog</a> → Peluquerías
+  </p>
+  <h1>Bot de WhatsApp para peluquerías: cómo llenar tu agenda sin coger el teléfono</h1>
+  <p class="subtitle">La guía práctica que ningún software de gestión te va a dar</p>
+  <div class="article-meta">
+    <span class="badge">💇 Peluquerías</span>
+    <span>📅 Junio 2026</span>
+    <span>⏱️ 8 min de lectura</span>
+    <span>✍️ Nodo Bots · Valencia</span>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<main class="article-wrap">
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Índice del artículo">
+    <h2>En este artículo</h2>
+    <ol>
+      <li><a href="#problema">El problema real de las peluquerías con WhatsApp</a></li>
+      <li><a href="#que-es">Qué es exactamente un bot de WhatsApp para peluquerías</a></li>
+      <li><a href="#que-hace">Qué puede (y qué no puede) hacer un bot</a></li>
+      <li><a href="#no-shows">Cómo reduce los no-shows de verdad</a></li>
+      <li><a href="#ejemplo">Conversación real: así gestiona el bot una cita</a></li>
+      <li><a href="#comparativa">Bot vs alternativas: comparativa honesta</a></li>
+      <li><a href="#empezar">Cómo empezar sin complicaciones</a></li>
+    </ol>
+  </nav>
+
+  <div class="prose">
+
+    <p>Son las 22:47 del martes. Tu peluquería está cerrada, tú estás en el sofá y alguien acaba de mandarte un WhatsApp: <em>"Hola, ¿tenéis hueco mañana a las 17?"</em></p>
+
+    <p>Si no contestas antes de que se vaya a dormir, mañana ya tiene cita en otro sitio. Y si sí contestas, ya sabes lo que pasa: empiezas a mirar el calendario, respondes, entra otro mensaje, y de repente llevas 20 minutos gestionando citas desde el sofá.</p>
+
+    <p>Eso tiene solución. Se llama bot de WhatsApp, y en este artículo te explico exactamente qué es, cómo funciona en una peluquería real y por qué es la única herramienta que trabaja mientras tú duermes.</p>
+
+    <!-- SECCIÓN 1 -->
+    <h2 id="problema">El problema real de las peluquerías con WhatsApp</h2>
+
+    <p>El 95% de los españoles tiene WhatsApp instalado. Para una peluquería, eso significa que la mayoría de sus clientes prefieren escribir por WhatsApp antes que llamar, antes que entrar en una app de reservas y desde luego antes que rellenar un formulario web.</p>
+
+    <p>El problema no es WhatsApp. El problema es que WhatsApp no está diseñado para gestionar una agenda de negocio. Está diseñado para chatear.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="stat-num">80%</span>
+        <span class="stat-label">de los mensajes de clientes llegan fuera de horario laboral</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">1h</span>
+        <span class="stat-label">es el tiempo máximo que un cliente espera respuesta antes de buscar otro</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">25%</span>
+        <span class="stat-label">de citas se pierden por falta de recordatorio automático</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">3h</span>
+        <span class="stat-label">al día de media dedica un peluquero a gestionar mensajes y citas</span>
+      </div>
+    </div>
+
+    <p>Tres horas al día gestionando mensajes. En una semana son 15 horas. En un mes, 60 horas. Ese tiempo tiene un coste real: o lo pagas tú con tu tiempo, o lo pagas con clientes que se pierden porque no contestaste a tiempo.</p>
+
+    <div class="highlight-box">
+      "El cliente que espera más de una hora tu respuesta en WhatsApp no es que se vaya. Es que ya tiene cita en otro sitio cuando finalmente le contestas."
+    </div>
+
+    <!-- SECCIÓN 2 -->
+    <h2 id="que-es">Qué es exactamente un bot de WhatsApp para peluquerías</h2>
+
+    <p>Un bot de WhatsApp es un asistente de inteligencia artificial que vive conectado a tu número de WhatsApp Business y responde por ti de forma automática, 24 horas al día, 7 días a la semana.</p>
+
+    <p>No es un menú de opciones del tipo "pulsa 1 para reservar". Eso es tecnología de 2005. Un bot moderno con IA entiende lenguaje natural: el cliente escribe como escribiría a un amigo, y el bot responde de forma coherente, con el tono de tu negocio.</p>
+
+    <div class="callout">
+      <span class="callout-icon">💡</span>
+      <div class="callout-body">
+        <h4>Diferencia clave</h4>
+        <p>Un bot de 2026 entiende "quiero hacerme las mechas el jueves por la tarde si puede ser con María" — y gestiona esa petición completa sin que intervenga nadie. No necesita que el cliente elija opciones de un menú.</p>
+      </div>
+    </div>
+
+    <p>Lo importante: el bot no reemplaza tu número de WhatsApp. Convive con él. Cuando el bot no puede resolver algo, la conversación puede pasarse a ti o a alguien de tu equipo. Siempre tienes el control.</p>
+
+    <!-- SECCIÓN 3 -->
+    <h2 id="que-hace">Qué puede (y qué no puede) hacer un bot</h2>
+
+    <h3>✅ Lo que sí hace, y bien</h3>
+    <ul>
+      <li><strong>Gestionar citas:</strong> consulta tu agenda de Google Calendar en tiempo real y confirma huecos disponibles al instante</li>
+      <li><strong>Responder preguntas frecuentes:</strong> precios, horarios, ubicación, servicios disponibles, tiempo estimado de cada servicio</li>
+      <li><strong>Enviar recordatorios automáticos:</strong> 24 horas antes y 2 horas antes de cada cita, con posibilidad de confirmar o cancelar</li>
+      <li><strong>Atender a las 3 de la madrugada:</strong> cuando la clienta de los sábados se acuerda a las 23:45 que necesita cita</li>
+      <li><strong>Gestionar cancelaciones y cambios:</strong> si alguien cancela, libera el hueco en tu agenda automáticamente</li>
+      <li><strong>Mantener el tono de tu negocio:</strong> habla como tú quieres que hable tu negocio, no como un robot genérico</li>
+    </ul>
+
+    <h3>❌ Lo que no hace (y por qué es honesto decirlo)</h3>
+    <ul>
+      <li>No decide si una clienta necesita un color especial que requiere consulta previa — eso lo decides tú</li>
+      <li>No gestiona situaciones muy complejas o emocionales — siempre puede redirigir a una persona</li>
+      <li>No reemplaza el contacto humano cuando la situación lo requiere</li>
+    </ul>
+
+    <!-- SECCIÓN 4 -->
+    <h2 id="no-shows">Cómo reduce los no-shows de verdad</h2>
+
+    <p>El no-show — el cliente que reservó y no apareció — es el mayor agujero económico de cualquier peluquería. Una hora vacía en tu agenda no es solo una hora perdida: es el coste del profesional, el coste del local, y el cliente que no pudiste meter en ese hueco porque estaba reservado.</p>
+
+    <p>La causa número uno de los no-shows no es la mala fe del cliente. Es el olvido. Y el olvido tiene solución: el recordatorio.</p>
+
+    <p>Un recordatorio enviado 24 horas antes con la opción de confirmar o cancelar cambia completamente la dinámica. El cliente que iba a olvidarse confirma. El que no puede venir cancela con tiempo suficiente para que puedas meter a otro. En ambos casos ganas.</p>
+
+    <div class="callout">
+      <span class="callout-icon">📊</span>
+      <div class="callout-body">
+        <h4>El dato que importa</h4>
+        <p>Las peluquerías que implementan recordatorios automáticos por WhatsApp reducen los no-shows entre un 60% y un 80%. En una peluquería con 5 citas de media al día y un ticket de 35€, eso puede suponer más de 400€ al mes recuperados.</p>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 5 -->
+    <h2 id="ejemplo">Conversación real: así gestiona el bot una cita</h2>
+
+    <p>Nada mejor que ver cómo funciona en la práctica. Esta es una conversación real de cómo un bot gestionaría una reserva en tu peluquería:</p>
+
+    <div class="convo-box">
+      <h4>💬 Conversación real — WhatsApp · 22:51h</h4>
+
+      <div class="msg client">
+        <span class="msg-sender">Ana García</span>
+        <div class="msg-bubble">Hola! quería saber si tenéis hueco esta semana para un corte y tinte</div>
+      </div>
+
+      <div class="msg bot">
+        <span class="msg-sender">Nodo · Tu Peluquería</span>
+        <div class="msg-bubble">¡Hola Ana! 😊 Claro que sí. Para corte y tinte necesito reservarte unas 2 horas. Esta semana tengo disponible:<br><br>📅 Miércoles 5 jun — 10:00h con Laura<br>📅 Jueves 6 jun — 16:30h con María<br>📅 Sábado 8 jun — 11:00h con Laura<br><br>¿Cuál te viene mejor?</div>
+      </div>
+
+      <div class="msg client">
+        <span class="msg-sender">Ana García</span>
+        <div class="msg-bubble">El jueves a las 16:30 perfecto!</div>
+      </div>
+
+      <div class="msg bot">
+        <span class="msg-sender">Nodo · Tu Peluquería</span>
+        <div class="msg-bubble">✅ ¡Apuntado! Tu cita:<br><br>📅 Jueves 6 de junio · 16:30h<br>💇 Corte + Tinte<br>👩 Con María<br>📍 C/ Mayor 12, Alzira<br><br>Te mando un recordatorio mañana a las 17:00. Si necesitas cambiar algo, escríbeme aquí. ¡Hasta el jueves! 😊</div>
+      </div>
+
+      <div class="msg client">
+        <span class="msg-sender">Ana García</span>
+        <div class="msg-bubble">Genial gracias!</div>
+      </div>
+    </div>
+
+    <p>Toda esa conversación ocurrió a las 22:51 de la noche. Sin que tú ni nadie de tu equipo mirara el móvil. La cita quedó registrada en tu Google Calendar, y el recordatorio ya estaba programado.</p>
+
+    <!-- SECCIÓN 6 -->
+    <h2 id="comparativa">Bot vs alternativas: comparativa honesta</h2>
+
+    <p>Antes de decidir si un bot es para ti, merece la pena compararlo con lo que probablemente ya estás usando o has considerado.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th>Bot WhatsApp IA</th>
+          <th>Gestión manual</th>
+          <th>App de reservas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Disponible 24/7</td>
+          <td class="tick">✓ Sí</td>
+          <td class="cross">✗ No</td>
+          <td class="tick">✓ Sí</td>
+        </tr>
+        <tr>
+          <td>El cliente usa WhatsApp (sin apps nuevas)</td>
+          <td class="tick">✓ Sí</td>
+          <td class="tick">✓ Sí</td>
+          <td class="cross">✗ No</td>
+        </tr>
+        <tr>
+          <td>Recordatorios automáticos</td>
+          <td class="tick">✓ Sí</td>
+          <td class="cross">✗ No</td>
+          <td class="tick">✓ Algunos</td>
+        </tr>
+        <tr>
+          <td>Responde preguntas frecuentes</td>
+          <td class="tick">✓ Sí</td>
+          <td class="cross">✗ No</td>
+          <td class="cross">✗ No</td>
+        </tr>
+        <tr>
+          <td>Tiempo de configuración</td>
+          <td>5–7 días</td>
+          <td>Inmediato</td>
+          <td>1–2 semanas</td>
+        </tr>
+        <tr>
+          <td>Tasa de adopción del cliente</td>
+          <td class="tick">✓ Muy alta</td>
+          <td class="tick">✓ Alta</td>
+          <td class="cross">✗ Baja (barrera de descarga)</td>
+        </tr>
+        <tr>
+          <td>Coste de tu tiempo</td>
+          <td class="tick">✓ Mínimo</td>
+          <td class="cross">✗ Muy alto</td>
+          <td>Medio</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>La app de reservas parece la solución obvia hasta que te das cuenta de que el 70% de los clientes no descarga una app nueva para reservar en una peluquería. WhatsApp ya lo tienen. La barrera de entrada es cero.</p>
+
+    <!-- SECCIÓN 7 -->
+    <h2 id="empezar">Cómo empezar sin complicaciones</h2>
+
+    <p>La pregunta habitual es: ¿esto es muy complicado de montar? La respuesta corta es no. Si tienes Google Calendar y WhatsApp Business, ya tienes lo que hace falta.</p>
+
+    <ul class="step-list">
+      <li class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Videollamada de 30 minutos</h4>
+          <p>Mapeamos tu negocio: horarios, servicios, precios, las 20 preguntas que más te hacen los clientes. Sin compromiso.</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Configuración en 5–7 días</h4>
+          <p>Conectamos el bot a tu WhatsApp Business y tu Google Calendar. Entrenamos la IA con el tono y la información de tu salón.</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Lanzamiento y ajuste</h4>
+          <p>Activamos y monitorizamos las primeras conversaciones contigo. Afinamos respuestas hasta que funcione exactamente como quieres.</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Tu negocio no duerme</h4>
+          <p>A partir de aquí el bot trabaja solo. Tú abres el calendar por la mañana con las citas del día ya confirmadas.</p>
+        </div>
+      </li>
+    </ul>
+
+    <p>No hace falta que cambies nada de cómo trabajas. El bot se adapta a ti, no al revés. Y si en algún momento quieres cambiar algo — precios, horarios, un servicio nuevo — lo actualizamos sin coste adicional.</p>
+
+    <div class="callout">
+      <span class="callout-icon">📍</span>
+      <div class="callout-body">
+        <h4>Trabajamos en Alzira, Valencia y la Ribera Alta</h4>
+        <p>Somos locales. Conocemos el mercado, hablamos contigo en persona si hace falta, y el soporte es en español y por WhatsApp. Sin tickets, sin esperas.</p>
+      </div>
+    </div>
+
+  </div><!-- /prose -->
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h2>¿Quieres ver cómo funciona en tu peluquería?</h2>
+    <p>Te hacemos una demo gratuita adaptada a tu negocio. En 30 minutos sabes si un bot te ayudaría y cuánto.</p>
+    <a href="https://nodobots.com/#contacto">Solicitar demo gratuita →</a>
+    <p class="cta-sub">Sin permanencia · Sin compromiso · Hecho en Valencia</p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Nodo</span>
+  Automatización inteligente para negocios locales · Valencia, España<br><br>
+  <a href="https://nodobots.com/">Inicio</a> · 
+  <a href="https://nodobots.com/blog.html">Blog</a> · 
+  <a href="https://nodobots.com/peluquerias.html">Peluquerías</a> · 
+  <a href="https://nodobots.com/#contacto">Contacto</a><br><br>
+  © 2026 Nodo · Todos los derechos reservados
+</footer>
+
+</body>
+</html>
