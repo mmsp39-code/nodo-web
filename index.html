@@ -2768,8 +2768,8 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   formData.append('entry.1786228736', document.getElementById('f-nombre').value.trim());
   formData.append('entry.974887443',  document.getElementById('f-telefono').value.trim());
   formData.append('entry.2007879917', 'no-proporcionado@web.com');
-  formData.append('entry.928953787',  '');
-  formData.append('entry.1577238219', 'Solicitud desde formulario web');
+  formData.append('entry.928953787',  'Solicitud desde formulario web');
+  formData.append('entry.1577238219', '');
 
   fetch('https://docs.google.com/forms/d/e/1FAIpQLSd1W4CnXZVNEtWniaLizf_os0c0XtATrZrk-7gGnWsROh65Sw/formResponse', {
     method: 'POST',
