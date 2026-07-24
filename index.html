@@ -2331,15 +2331,7 @@
 </footer>
 
 
-<!-- Formulario oculto → Google Forms (funciona desde file://) -->
-<iframe name="hidden-gf" style="display:none"></iframe>
-<form id="gform" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd1W4CnXZVNEtWniaLizf_os0c0XtATrZrk-7gGnWsROh65Sw/formResponse" method="post" target="hidden-gf" style="display:none">
-  <input name="entry.1786228736" id="g-nombre">
-  <input name="entry.974887443"  id="g-telefono">
-  <input name="entry.2007879917" id="g-email">
-  <input name="entry.928953787"  id="g-sector">
-  <input name="entry.1577238219" id="g-mensaje">
-</form>
+<!-- Formulario oculto eliminado — el envío se hace por fetch -->
 
 <!-- ═══════════════════════════════════════
      COOKIE BANNER
@@ -2768,22 +2760,25 @@ document.getElementById('cal-next').addEventListener('click', () => {
 
 renderCal();
 
-// ── FORM SUBMIT → Google Forms (iframe trick, funciona desde file://) ──
+// ── FORM SUBMIT → Google Forms (fetch) ──
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
-  // Copiar valores al formulario oculto
-  document.getElementById('g-nombre').value   = document.getElementById('f-nombre').value.trim();
-  document.getElementById('g-telefono').value = document.getElementById('f-telefono').value.trim();
-  document.getElementById('g-email').value    = 'no-proporcionado@web.com';
-  document.getElementById('g-sector').value   = '';
-  document.getElementById('g-mensaje').value  = 'Solicitud desde formulario web';
+  var formData = new URLSearchParams();
+  formData.append('entry.1786228736', document.getElementById('f-nombre').value.trim());
+  formData.append('entry.974887443',  document.getElementById('f-telefono').value.trim());
+  formData.append('entry.2007879917', 'no-proporcionado@web.com');
+  formData.append('entry.928953787',  '');
+  formData.append('entry.1577238219', 'Solicitud desde formulario web');
 
-  // Enviar al iframe oculto (no redirige la página)
-  document.getElementById('gform').submit();
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSd1W4CnXZVNEtWniaLizf_os0c0XtATrZrk-7gGnWsROh65Sw/formResponse', {
+    method: 'POST',
+    body: formData,
+    mode: 'no-cors'
+  });
 
   // Mostrar confirmación
-  const msg = document.getElementById('form-msg');
+  var msg = document.getElementById('form-msg');
   msg.style.display = 'block';
   msg.style.color = 'var(--cyan)';
   msg.textContent = '✓ Solicitud enviada. Te contactamos en menos de 24 horas.';
