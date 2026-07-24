@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot de WhatsApp para fisioterapeutas: que el móvil deje de sonar en consulta | Nodo</title>
+  <meta name="description" content="Cómo un bot de WhatsApp gestiona las citas de tu clínica de fisioterapia, manda recordatorios y contesta pacientes mientras tú estás en consulta. Sin complicaciones.">
+  <meta name="author" content="Nodo Bots">
+  <meta name="keywords" content="bot whatsapp fisioterapia, chatbot fisio, automatizar citas fisioterapia, recordatorios citas fisio, bot reservas fisioterapeuta valencia alzira, whatsapp business fisioterapia">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nodobots.com/bot-whatsapp-fisioterapia.html">
+  <meta property="og:title" content="Bot de WhatsApp para fisioterapeutas: que el móvil deje de sonar en consulta">
+  <meta property="og:description" content="Cómo un bot de WhatsApp gestiona citas, manda recordatorios y contesta pacientes mientras estás en consulta.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nodobots.com/bot-whatsapp-fisioterapia.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Nodo Bots">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bot de WhatsApp para fisioterapeutas: que el móvil deje de sonar en consulta">
+  <meta name="twitter:description" content="Gestiona citas y recordatorios de tu clínica de fisio por WhatsApp. Sin llamadas perdidas, sin ausencias, sin líos.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Bot de WhatsApp para fisioterapeutas: que el móvil deje de sonar en consulta",
+    "description": "Guía práctica sobre cómo un bot de WhatsApp puede gestionar las citas de tu clínica de fisioterapia, mandar recordatorios y atender pacientes 24/7.",
+    "author": {"@type": "Organization", "name": "Nodo Bots"},
+    "publisher": {"@type": "Organization", "name": "Nodo Bots", "url": "https://nodobots.com"},
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "url": "https://nodobots.com/bot-whatsapp-fisioterapia.html",
+    "inLanguage": "es"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-bg: #f9f8f6;
+      --color-surface: #ffffff;
+      --color-text: #1a1a1a;
+      --color-text-muted: #6b7280;
+      --color-accent: #059669;
+      --color-accent-light: #d1fae5;
+      --color-border: #e5e7eb;
+      --color-highlight: #fef9c3;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-editorial: 'Lora', serif;
+      --max-w: 740px;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    /* NAV */
+    nav { background: #fff; border-bottom: 1px solid var(--color-border); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { height: 32px; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--color-text-muted); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--color-accent); }
+    .nav-cta { background: var(--color-accent); color: #fff; padding: 8px 18px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    /* HERO */
+    .article-hero { background: linear-gradient(135deg, #064e3b 0%, #059669 60%, #10b981 100%); padding: 72px 24px 80px; text-align: center; }
+    .article-hero .breadcrumb { color: rgba(255,255,255,0.7); font-size: 13px; margin-bottom: 20px; letter-spacing: .04em; text-transform: uppercase; }
+    .article-hero .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    .article-hero .breadcrumb a:hover { color: #fff; }
+    .article-hero h1 { font-family: var(--font-editorial); font-size: clamp(28px, 5vw, 48px); font-weight: 600; color: #fff; max-width: 760px; margin: 0 auto 20px; line-height: 1.25; }
+    .article-hero .subtitle { color: rgba(255,255,255,0.85); font-size: 18px; max-width: 560px; margin: 0 auto 32px; font-weight: 400; }
+    .article-meta { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .article-meta span { color: rgba(255,255,255,0.75); font-size: 13px; display: flex; align-items: center; gap: 5px; }
+    .badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+
+    /* ARTICLE */
+    .article-wrap { max-width: var(--max-w); margin: 0 auto; padding: 60px 24px 80px; }
+    .toc { background: var(--color-surface); border: 1px solid var(--color-border); border-left: 4px solid var(--color-accent); border-radius: var(--radius); padding: 24px 28px; margin-bottom: 48px; }
+    .toc h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--color-text-muted); font-weight: 700; margin-bottom: 14px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 8px; }
+    .toc a { color: var(--color-accent); text-decoration: none; font-size: 15px; font-weight: 500; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* PROSE */
+    .prose p { margin-bottom: 24px; color: #374151; }
+    .prose h2 { font-family: var(--font-editorial); font-size: 28px; font-weight: 600; color: var(--color-text); margin: 52px 0 20px; line-height: 1.3; scroll-margin-top: 80px; }
+    .prose h3 { font-size: 19px; font-weight: 700; color: var(--color-text); margin: 36px 0 14px; }
+    .prose strong { color: var(--color-text); font-weight: 700; }
+    .prose ul, .prose ol { padding-left: 22px; margin-bottom: 24px; }
+    .prose li { margin-bottom: 10px; color: #374151; }
+
+    .highlight-box { background: var(--color-highlight); border-left: 4px solid #ca8a04; border-radius: var(--radius); padding: 20px 24px; margin: 32px 0; font-size: 16px; color: #713f12; font-style: italic; font-family: var(--font-editorial); }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 32px 0; }
+    .stat-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 20px; text-align: center; }
+    .stat-card .stat-num { font-size: 36px; font-weight: 800; color: var(--color-accent); display: block; line-height: 1; margin-bottom: 6px; }
+    .stat-card .stat-label { font-size: 13px; color: var(--color-text-muted); font-weight: 500; }
+
+    .convo-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius); padding: 24px; margin: 32px 0; }
+    .convo-box h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: #15803d; font-weight: 700; margin-bottom: 16px; }
+    .msg { display: flex; flex-direction: column; margin-bottom: 12px; }
+    .msg.client { align-items: flex-end; }
+    .msg.bot { align-items: flex-start; }
+    .msg-bubble { max-width: 85%; padding: 10px 14px; border-radius: 16px; font-size: 14px; line-height: 1.5; }
+    .msg.client .msg-bubble { background: #dcfce7; color: #14532d; border-bottom-right-radius: 4px; }
+    .msg.bot .msg-bubble { background: #fff; border: 1px solid #d1fae5; color: #374151; border-bottom-left-radius: 4px; }
+    .msg-sender { font-size: 11px; color: #6b7280; margin-bottom: 4px; font-weight: 600; }
+
+    .compare-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--color-border); }
+    .compare-table th { background: var(--color-accent); color: #fff; padding: 12px 16px; text-align: left; font-weight: 700; font-size: 13px; }
+    .compare-table td { padding: 12px 16px; border-bottom: 1px solid var(--color-border); color: #374151; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:nth-child(even) td { background: #f9fafb; }
+    .tick { color: #16a34a; font-weight: 700; }
+    .cross { color: #dc2626; font-weight: 700; }
+
+    .callout { background: var(--color-accent-light); border: 1px solid #a7f3d0; border-radius: var(--radius); padding: 24px 28px; margin: 36px 0; display: flex; gap: 16px; align-items: flex-start; }
+    .callout-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+    .callout-body h4 { font-size: 16px; font-weight: 700; color: #065f46; margin-bottom: 6px; }
+    .callout-body p { color: #064e3b; font-size: 15px; margin: 0; }
+
+    .step-list { list-style: none; padding: 0; margin: 28px 0; }
+    .step-item { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+    .step-num { background: var(--color-accent); color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+    .step-content h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .step-content p { font-size: 15px; color: #374151; margin: 0; }
+
+    .cta-block { background: linear-gradient(135deg, #064e3b, #059669); border-radius: 16px; padding: 44px 40px; text-align: center; margin: 56px 0 0; }
+    .cta-block h2 { font-family: var(--font-editorial); font-size: 28px; color: #fff; margin-bottom: 12px; }
+    .cta-block p { color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 28px; }
+    .cta-block a { display: inline-block; background: #fff; color: var(--color-accent); padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: 16px; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+    .cta-block a:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+    .cta-sub { color: rgba(255,255,255,0.65) !important; font-size: 13px !important; margin-top: 14px !important; margin-bottom: 0 !important; }
+
+    footer { background: #111827; color: rgba(255,255,255,0.6); text-align: center; padding: 32px 24px; font-size: 14px; }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    footer a:hover { color: #fff; }
+    footer .footer-logo { color: #fff; font-weight: 800; font-size: 18px; margin-bottom: 12px; display: block; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .article-hero { padding: 48px 20px 56px; }
+      .article-wrap { padding: 40px 20px 60px; }
+      .cta-block { padding: 32px 24px; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://nodobots.com/" class="nav-logo">
+      <img src="https://nodobots.com/nodobots-logo.png" alt="NodoBots">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://nodobots.com/fisios.html">Fisioterapia</a></li>
+      <li><a href="https://nodobots.com/dentistas.html">Clínicas Dentales</a></li>
+      <li><a href="https://nodobots.com/peluquerias.html">Peluquerías</a></li>
+      <li><a href="https://nodobots.com/restaurantes.html">Restaurantes</a></li>
+      <li><a href="https://nodobots.com/blog.html">Blog</a></li>
+    </ul>
+    <a href="https://nodobots.com/#contacto" class="nav-cta">Demo gratuita →</a>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <p class="breadcrumb">
+    <a href="https://nodobots.com/">Inicio</a> → <a href="https://nodobots.com/blog.html">Blog</a> → Fisioterapia
+  </p>
+  <h1>Bot de WhatsApp para fisioterapeutas: que el móvil deje de sonar en consulta</h1>
+  <p class="subtitle">Estás con un paciente en camilla y el teléfono no para. Eso se puede arreglar.</p>
+  <div class="article-meta">
+    <span class="badge">🏥 Fisioterapia</span>
+    <span>📅 Julio 2026</span>
+    <span>⏱️ 9 min de lectura</span>
+    <span>✍️ Nodo Bots · Valencia</span>
+  </div>
+</header>
+
+<main class="article-wrap">
+
+  <nav class="toc" aria-label="Índice del artículo">
+    <h2>En este artículo</h2>
+    <ol>
+      <li><a href="#problema">El día a día real de un fisio con WhatsApp</a></li>
+      <li><a href="#que-es">Qué es un bot de WhatsApp (sin tecnicismos)</a></li>
+      <li><a href="#que-hace">Qué hace el bot por ti y qué no</a></li>
+      <li><a href="#no-shows">El agujero de las citas que no aparecen</a></li>
+      <li><a href="#ejemplo">Así se ve una conversación real del bot</a></li>
+      <li><a href="#comparativa">Bot vs lo que estás haciendo ahora</a></li>
+      <li><a href="#empezar">Cómo se monta esto en tu clínica</a></li>
+    </ol>
+  </nav>
+
+  <div class="prose">
+
+    <p>Estás haciéndole una punción seca a un paciente. El móvil vibra. Y otra vez. Y otra. Cuando terminas la sesión, tienes 4 WhatsApps de gente preguntando si hay hueco, una llamada perdida y un mensaje de alguien que dice que mañana no puede venir.</p>
+
+    <p>Contestas entre paciente y paciente. Miras el calendario, buscas huecos, escribes, confirmas. Para cuando quieres darte cuenta, llevas 40 minutos del día gestionando mensajes en vez de tratando pacientes.</p>
+
+    <p>Suena familiar, ¿verdad? A eso se le puede poner solución sin cambiar cómo trabajas.</p>
+
+    <h2 id="problema">El día a día real de un fisio con WhatsApp</h2>
+
+    <p>Seamos honestos: la mayoría de pacientes ya no llaman. Mandan un WhatsApp. Y tiene todo el sentido — es más cómodo para ellos, no tienen que esperar a que descuelgues, y pueden escribirte a las 11 de la noche cuando se acuerdan de que necesitan cita.</p>
+
+    <p>El problema es que tú no puedes contestar a las 11 de la noche. Ni a las 9 de la mañana cuando estás con las manos encima de un paciente. Ni a mediodía cuando comes en 20 minutos entre sesión y sesión.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="stat-num">30%</span>
+        <span class="stat-label">de pacientes que no reciben respuesta en 1 hora buscan otro fisio</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">4-6</span>
+        <span class="stat-label">llamadas perdidas al día de media en una clínica de fisio</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">20%</span>
+        <span class="stat-label">de citas sin recordatorio acaban en ausencia</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">45min</span>
+        <span class="stat-label">al día dedicados a gestionar mensajes y agenda</span>
+      </div>
+    </div>
+
+    <p>45 minutos al día parece poco. Pero son casi 4 horas a la semana. En un mes, 16 horas. Eso es un día entero de consulta que se te va contestando mensajes.</p>
+
+    <div class="highlight-box">
+      "El paciente que te escribe a las 22:00 con dolor de espalda no está comparando fisios. Quiere cita ya. Si no le contestas, mañana llama al primero que encuentra en Google."
+    </div>
+
+    <h2 id="que-es">Qué es un bot de WhatsApp (sin tecnicismos)</h2>
+
+    <p>Es un asistente que contesta tu WhatsApp por ti cuando tú no puedes. Punto.</p>
+
+    <p>No es un menú donde el paciente tiene que pulsar números. Eso es antiguo y a la gente le da pereza. Esto es diferente: el paciente escribe como le da la gana — "tengo un dolor en el hombro desde hace una semana, ¿podéis verme?" — y el bot le responde con un lenguaje normal, le busca hueco en tu agenda y le confirma la cita.</p>
+
+    <p>Todo esto pasa automáticamente. Tú llegas por la mañana, abres el Google Calendar y ya tienes las citas del día puestas. Sin haber tocado el móvil.</p>
+
+    <div class="callout">
+      <span class="callout-icon">💡</span>
+      <div class="callout-body">
+        <h4>Esto no es ciencia ficción</h4>
+        <p>El bot entiende cosas como "¿tenéis hueco el jueves por la tarde?" o "me duele la rodilla desde que salí a correr el domingo". No necesita que el paciente siga ningún formato ni descargue ninguna app.</p>
+      </div>
+    </div>
+
+    <p>Y cuando hay algo que el bot no puede resolver — un caso complicado, alguien que necesita hablar contigo directamente — te avisa y tú tomas el relevo. Siempre tienes el control.</p>
+
+    <h2 id="que-hace">Qué hace el bot por ti y qué no</h2>
+
+    <h3>Lo que hace, y bien</h3>
+    <ul>
+      <li><strong>Gestiona citas:</strong> mira tu Google Calendar en tiempo real, ve los huecos libres y confirma citas al momento. A cualquier hora.</li>
+      <li><strong>Contesta las preguntas de siempre:</strong> precios, horarios, dirección, si hace falta traer algo a la primera sesión, si aceptáis mutua...</li>
+      <li><strong>Manda recordatorios:</strong> 24 horas antes y 2 horas antes de cada cita. El paciente confirma o cancela desde el propio WhatsApp.</li>
+      <li><strong>Gestiona cancelaciones:</strong> si alguien cancela, el hueco se libera automáticamente en tu agenda.</li>
+      <li><strong>Habla como tu clínica:</strong> no suena a robot. Suena como quieres que suene tu negocio — cercano, profesional, sin ser borde ni empalagoso.</li>
+      <li><strong>Funciona a las 3 de la madrugada:</strong> cuando alguien se levanta con tortícolis y quiere cita para el día siguiente.</li>
+    </ul>
+
+    <h3>Lo que no hace (y está bien que lo sepas)</h3>
+    <ul>
+      <li>No hace diagnósticos. Si alguien describe síntomas, puede sugerir una valoración inicial, pero no le dice qué tiene.</li>
+      <li>No gestiona urgencias médicas. Para eso hay otros canales.</li>
+      <li>No sustituye una conversación cuando el paciente necesita que le expliques algo con detalle. Para eso estás tú.</li>
+    </ul>
+
+    <h2 id="no-shows">El agujero de las citas que no aparecen</h2>
+
+    <p>En fisioterapia esto duele especialmente. Las sesiones suelen durar entre 30 y 60 minutos. Un paciente que no viene es un hueco que ya no puedes llenar porque te avisó tarde — o directamente no avisó.</p>
+
+    <p>Y no es mala fe. La mayoría de las veces es que se le olvidó. Tenía la cita el jueves a las 17:00, pero el jueves a las 16:45 estaba liado con otra cosa y ni se acordó.</p>
+
+    <p>La solución es sencilla: un recordatorio por WhatsApp el día antes. Un mensaje que diga "Mañana tienes cita a las 17:00. ¿Confirmas o prefieres cambiarla?". El paciente contesta con un "sí" o dice "no puedo, ¿hay hueco el viernes?" y el bot le recoloca.</p>
+
+    <div class="callout">
+      <span class="callout-icon">📊</span>
+      <div class="callout-body">
+        <h4>Números reales</h4>
+        <p>Las clínicas que usan recordatorios automáticos por WhatsApp bajan las ausencias entre un 60% y un 80%. Si cobras 40€ la sesión y pierdes 2 a la semana por ausencias, son 320€ al mes que dejas de perder. Al año, casi 4.000€.</p>
+      </div>
+    </div>
+
+    <p>Y hay otro efecto que no se ve en los números: cuando alguien cancela con tiempo, puedes meter a otro paciente en ese hueco. Eso no solo evita perder dinero — lo genera.</p>
+
+    <h2 id="ejemplo">Así se ve una conversación real del bot</h2>
+
+    <p>Esto es lo que pasaría en tu clínica un martes a las 21:30. Tú estás cenando. El bot está trabajando.</p>
+
+    <div class="convo-box">
+      <h4>💬 Conversación real — WhatsApp · 21:34h</h4>
+
+      <div class="msg client">
+        <span class="msg-sender">Carlos Martínez</span>
+        <div class="msg-bubble">Hola buenas, llevo unos días con dolor en la zona lumbar y quería pedir cita para que me vean</div>
+      </div>
+
+      <div class="msg bot">
+        <span class="msg-sender">Nodo · Tu Clínica Fisio</span>
+        <div class="msg-bubble">Hola Carlos, siento lo del dolor lumbar. Para empezar te haríamos una valoración inicial de 45 minutos donde evaluamos bien qué está pasando y montamos un plan de tratamiento.<br><br>Esta semana tengo hueco:<br><br>📅 Miércoles 24 jul — 10:00h<br>📅 Jueves 25 jul — 17:30h<br>📅 Viernes 26 jul — 12:00h<br><br>¿Cuál te viene mejor?</div>
+      </div>
+
+      <div class="msg client">
+        <span class="msg-sender">Carlos Martínez</span>
+        <div class="msg-bubble">El jueves a las 17:30 perfecto, cuanto cuesta la primera sesion?</div>
+      </div>
+
+      <div class="msg bot">
+        <span class="msg-sender">Nodo · Tu Clínica Fisio</span>
+        <div class="msg-bubble">La valoración inicial son 45€. Las sesiones de seguimiento, 38€ cada una.<br><br>Te confirmo la cita:<br><br>📅 Jueves 25 de julio · 17:30h<br>🏥 Valoración inicial (45 min)<br>👤 Carlos Martínez<br>📍 C/ San Roque 8, Alzira<br><br>Ven con ropa cómoda. Te mando un recordatorio mañana. Si necesitas cambiar algo, escríbeme aquí. ¡Hasta el jueves!</div>
+      </div>
+
+      <div class="msg client">
+        <span class="msg-sender">Carlos Martínez</span>
+        <div class="msg-bubble">Perfecto gracias!</div>
+      </div>
+    </div>
+
+    <p>21:34 de un martes. Cita confirmada, registrada en Google Calendar, recordatorio programado. Sin que nadie de la clínica haya tocado el móvil.</p>
+
+    <h2 id="comparativa">Bot vs lo que estás haciendo ahora</h2>
+
+    <p>Probablemente estés gestionando las citas de una de estas formas. Aquí va una comparación sin adornos.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Bot WhatsApp</th>
+          <th>Contestar tú</th>
+          <th>Recepcionista</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Disponible 24/7</td>
+          <td class="tick">✓ Sí</td>
+          <td class="cross">✗ No</td>
+          <td class="cross">✗ En horario</td>
+        </tr>
+        <tr>
+          <td>El paciente usa WhatsApp</td>
+          <td class="tick">✓ Sí</td>
+          <td class="tick">✓ Sí</td>
+          <td class="cross">✗ Teléfono</td>
+        </tr>
+        <tr>
+          <td>Recordatorios automáticos</td>
+          <td class="tick">✓ Sí</td>
+          <td class="cross">✗ Manual</td>
+          <td class="cross">✗ Manual</td>
+        </tr>
+        <tr>
+          <td>Contesta mientras tratas pacientes</td>
+          <td class="tick">✓ Siempre</td>
+          <td class="cross">✗ Imposible</td>
+          <td class="tick">✓ Sí</td>
+        </tr>
+        <tr>
+          <td>Coste mensual</td>
+          <td>Desde 97€</td>
+          <td>Tu tiempo</td>
+          <td>1.200€+</td>
+        </tr>
+        <tr>
+          <td>Responde preguntas frecuentes</td>
+          <td class="tick">✓ Sí</td>
+          <td class="cross">✗ Tú cada vez</td>
+          <td class="tick">✓ Sí</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>No se trata de elegir entre un bot y una persona. Si tienes recepcionista, el bot le quita la carga de los mensajes fuera de horario y los recordatorios. Si no tienes recepcionista — que es el caso de muchos fisios autónomos — el bot cubre ese hueco a una fracción del coste.</p>
+
+    <h2 id="empezar">Cómo se monta esto en tu clínica</h2>
+
+    <p>La pregunta que nos hace todo el mundo: "¿Esto es complicado?" No. Si usas Google Calendar y WhatsApp, ya tienes todo lo que hace falta.</p>
+
+    <ul class="step-list">
+      <li class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Una llamada de 30 minutos</h4>
+          <p>Nos cuentas cómo funciona tu clínica: horarios, servicios, precios, las preguntas que te hacen los pacientes todos los días. Sin compromiso.</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>En una semana lo tienes montado</h4>
+          <p>Conectamos el bot a tu WhatsApp Business y a tu agenda de Google. Le enseñamos cómo habla tu clínica y qué información tiene que dar.</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Lo probamos juntos</h4>
+          <p>Las primeras conversaciones las revisamos contigo. Si algo suena raro o falta algo, lo ajustamos al momento.</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Tú te dedicas a tratar pacientes</h4>
+          <p>A partir de aquí el bot trabaja solo. Tú abres el calendario por la mañana y ya tienes el día organizado.</p>
+        </div>
+      </li>
+    </ul>
+
+    <p>No tienes que cambiar cómo trabajas. No tienes que aprender nada nuevo. Y si en algún momento quieres cambiar horarios, precios o añadir un servicio, nos lo dices y lo actualizamos.</p>
+
+    <div class="callout">
+      <span class="callout-icon">📍</span>
+      <div class="callout-body">
+        <h4>Somos de aquí</h4>
+        <p>Trabajamos en Alzira, Valencia y alrededores. Si prefieres que nos veamos en persona para explicarte cómo funciona, tomamos un café. El soporte es en español, por WhatsApp, y contestamos nosotros — no un chatbot.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cta-block">
+    <h2>¿Quieres ver cómo quedaría en tu clínica?</h2>
+    <p>Te hacemos una demo con los datos de tu negocio. En 30 minutos sabes si te compensa y cuánto te ahorrarías.</p>
+    <a href="https://nodobots.com/#contacto">Pedir demo gratuita →</a>
+    <p class="cta-sub">Sin permanencia · Sin compromiso · Hecho en Valencia</p>
+  </div>
+
+</main>
+
+<footer>
+  <span class="footer-logo">Nodo</span>
+  Automatización inteligente para negocios locales · Valencia, España<br><br>
+  <a href="https://nodobots.com/">Inicio</a> ·
+  <a href="https://nodobots.com/blog.html">Blog</a> ·
+  <a href="https://nodobots.com/fisios.html">Fisioterapia</a> ·
+  <a href="https://nodobots.com/#contacto">Contacto</a><br><br>
+  © 2026 Nodo · Todos los derechos reservados
+</footer>
+
+</body>
+</html>
