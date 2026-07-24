@@ -225,6 +225,14 @@
     }
     .nav-links a:hover { color: var(--text); }
 
+    .dropdown { position: relative; }
+    .dropdown-trigger { cursor: pointer; }
+    .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: rgba(17,17,24,0.97); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 0.6rem 0; min-width: 240px; list-style: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 1000; margin-top: 0.5rem; }
+    .dropdown-content::before { content: ''; position: absolute; top: -0.6rem; left: 0; right: 0; height: 0.6rem; }
+    .dropdown-content li a { display: flex; align-items: center; padding: 0.6rem 1.2rem; color: var(--text2) !important; font-size: 0.88rem; transition: all 0.2s; white-space: nowrap; }
+    .dropdown-content li a:hover { background: rgba(139,92,246,0.1); color: var(--cyan) !important; }
+    .dropdown:hover .dropdown-content { display: block; }
+
     .nav-actions {
       display: flex;
       align-items: center;
@@ -1479,10 +1487,20 @@
   </a>
 
   <ul class="nav-links">
-    <li><a href="#servicios">Servicios</a></li>
+    <li class="dropdown">
+      <a class="dropdown-trigger">Sectores ▾</a>
+      <ul class="dropdown-content">
+        <li><a href="fisios.html">🏥 Fisioterapia</a></li>
+        <li><a href="dentistas.html">🦷 Clínicas Dentales</a></li>
+        <li><a href="peluquerias.html">💇 Peluquerías</a></li>
+        <li><a href="restaurantes.html">🍽️ Restaurantes</a></li>
+        <li><a href="talleres.html">🔧 Talleres Mecánicos</a></li>
+      </ul>
+    </li>
     <li><a href="#demo">Demo</a></li>
     <li><a href="#precios">Precios</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="blog.html">✍️ Blog</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
 
@@ -1496,10 +1514,14 @@
 </nav>
 
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#servicios" class="mobile-link">Servicios</a>
+  <a href="fisios.html" class="mobile-link">🏥 Fisioterapia</a>
+  <a href="dentistas.html" class="mobile-link">🦷 Clínicas Dentales</a>
+  <a href="peluquerias.html" class="mobile-link">💇 Peluquerías</a>
+  <a href="restaurantes.html" class="mobile-link">🍽️ Restaurantes</a>
+  <a href="talleres.html" class="mobile-link">🔧 Talleres Mecánicos</a>
   <a href="#demo" class="mobile-link">Demo en vivo</a>
   <a href="#precios" class="mobile-link">Precios</a>
-  <a href="#faq" class="mobile-link">Preguntas frecuentes</a>
+  <a href="blog.html" class="mobile-link">✍️ Blog</a>
   <a href="#contacto" class="mobile-link">Contacto</a>
   <a href="#demo" class="btn-primary" style="width:fit-content">Probar demo en vivo →</a>
 </div>
