@@ -2775,9 +2775,9 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   // Copiar valores al formulario oculto
   document.getElementById('g-nombre').value   = document.getElementById('f-nombre').value.trim();
   document.getElementById('g-telefono').value = document.getElementById('f-telefono').value.trim();
-  document.getElementById('g-email').value    = '';
+  document.getElementById('g-email').value    = 'no-proporcionado@web.com';
   document.getElementById('g-sector').value   = '';
-  document.getElementById('g-mensaje').value  = '';
+  document.getElementById('g-mensaje').value  = 'Solicitud desde formulario web';
 
   // Enviar al iframe oculto (no redirige la página)
   document.getElementById('gform').submit();
