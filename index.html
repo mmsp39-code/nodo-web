@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nodo · Un asistente de WhatsApp que atiende a tus clientes mientras tú trabajas | Valencia</title>
   <meta name="description" content="Tu bot de WhatsApp contesta a tus clientes, reserva citas y les recuerda su hora. Para peluquerías, restaurantes, clínicas y cualquier negocio. Sin saber de tecnología. Pruébalo gratis. Valencia, España.">
-  <meta name="keywords" content="bot whatsapp negocios locales, chatbot telegram españa, automatización negocios, bot reservas citas, bot taller mecánico, bot peluquería, bot restaurante, bot bar, bot lavandería, bot inmobiliaria, bot gimnasio, inteligencia artificial negocios valencia, chatbot sin código, automatización whatsapp telegram">
+  <meta name="keywords" content="bot whatsapp negocios locales, chatbot telegram españa, automatización negocios, bot reservas citas, bot taller mecánico, bot peluquería, bot restaurante, bot bar, bot lavandería, bot inmobiliaria, bot gimnasio, inteligencia artificial negocios valencia, chatbot sin código, automatización whatsapp telegram, bot whatsapp valencia, bot reservas alzira, automatización negocios locales ribera alta, chatbot negocios alzira, bot citas valencia">
   <meta name="author" content="Nodo Bots">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.nodobots.com/">
@@ -102,7 +102,15 @@
         "name": "¿Cuánto tiempo tarda en estar listo el bot?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "En Nodo podemos tener tu bot funcionando en menos de 48 horas desde que nos das la información de tu negocio."
+          "text": "En Nodo podemos tener tu bot funcionando en menos de 1 semana desde que nos das la información de tu negocio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Ofrecéis bots de WhatsApp en Alzira, Valencia y la Ribera Alta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, en Nodo trabajamos con negocios locales de Alzira, Valencia, la Ribera Alta y toda la Comunidad Valenciana. Configuramos bots de WhatsApp y Telegram para peluquerías, clínicas de fisioterapia, dentistas, restaurantes, talleres mecánicos y cualquier negocio que necesite automatizar sus reservas y atención al cliente."
         }
       }
     ]
@@ -110,24 +118,24 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:         #09090B;
-      --bg2:        #111118;
-      --bg3:        #1C1C28;
-      --violet:     #8B5CF6;
-      --cyan:       #06B6D4;
+      --bg:         #0a0a0f;
+      --bg2:        #12121a;
+      --bg3:        #1a1a26;
+      --violet:     #7c6df0;
+      --cyan:       #38bdf8;
       --gold:       #D4AF37;
-      --text:       #F4F4F5;
-      --text2:      #A1A1AA;
+      --text:       #f0f0f5;
+      --text2:      #9ca3af;
       --text3:      #52525B;
-      --border:     rgba(139,92,246,0.2);
-      --glow-v:     rgba(139,92,246,0.12);
-      --glow-c:     rgba(6,182,212,0.10);
+      --border:     rgba(124,109,240,0.15);
+      --glow-v:     rgba(124,109,240,0.10);
+      --glow-c:     rgba(56,189,248,0.08);
       --grad:       linear-gradient(135deg, var(--violet), var(--cyan));
     }
 
@@ -136,22 +144,12 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 16px;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    /* ── NOISE TEXTURE ── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.4;
-    }
 
     /* ── NAVBAR ── */
     nav {
@@ -180,7 +178,7 @@
       width: min(340px, 70vw);
       height: auto;
       border-radius: 12px;
-      filter: drop-shadow(0 0 32px rgba(139,92,246,0.25));
+      filter: drop-shadow(0 0 20px rgba(124,109,240,0.15));
     }
 
     /* ── LOGO NAVBAR ── */
@@ -195,7 +193,7 @@
       align-items: center;
       gap: 10px;
       text-decoration: none;
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
       font-weight: 700;
       color: var(--text);
@@ -243,7 +241,7 @@
       background: none;
       border: none;
       color: var(--text2);
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.9rem;
       cursor: pointer;
       transition: color 0.2s;
@@ -255,39 +253,23 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-family: 'DM Sans', sans-serif;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
       text-decoration: none;
-      position: relative;
-      background: var(--bg3);
-      color: var(--text);
-      border: 1.5px solid transparent;
-      background-clip: padding-box;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .btn-primary::before {
-      content: '';
-      position: absolute;
-      inset: -1.5px;
-      border-radius: 9px;
       background: var(--grad);
-      z-index: -1;
-      animation: borderSpin 3s linear infinite;
-    }
-
-    @keyframes borderSpin {
-      0%   { filter: hue-rotate(0deg); }
-      100% { filter: hue-rotate(360deg); }
+      color: #fff;
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
     }
 
     .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 30px var(--glow-v);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(124,109,240,0.3);
+      opacity: 0.92;
     }
 
     /* hamburger */
@@ -351,31 +333,12 @@
       overflow: hidden;
     }
 
-    /* ambient glow blobs */
     #hero::before {
       content: '';
       position: absolute;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%);
-      top: 10%; left: -10%;
-      border-radius: 50%;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(124,109,240,0.08) 0%, transparent 60%);
       pointer-events: none;
-      animation: blobFloat 8s ease-in-out infinite;
-    }
-    #hero::after {
-      content: '';
-      position: absolute;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(6,182,212,0.12) 0%, transparent 70%);
-      top: 20%; right: -5%;
-      border-radius: 50%;
-      pointer-events: none;
-      animation: blobFloat 10s ease-in-out infinite reverse;
-    }
-
-    @keyframes blobFloat {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50%       { transform: translateY(-30px) scale(1.05); }
     }
 
     .hero-badge {
@@ -409,7 +372,7 @@
     }
 
     .hero-h1 {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(2.8rem, 7vw, 5.5rem);
       font-weight: 800;
       line-height: 1.08;
@@ -450,7 +413,7 @@
       gap: 6px;
       padding: 10px 20px;
       border-radius: 8px;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.9rem;
       font-weight: 500;
       cursor: pointer;
@@ -526,7 +489,7 @@
       background: var(--grad);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-weight: 700;
       font-size: 14px;
       color: white;
@@ -757,7 +720,7 @@
     }
 
     .section-h2 {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(1.9rem, 4vw, 3rem);
       font-weight: 700;
       line-height: 1.15;
@@ -800,7 +763,7 @@
     }
 
     .pain-title {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.05rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
@@ -835,7 +798,7 @@
     }
 
     .step-num {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 3.5rem;
       font-weight: 800;
       line-height: 1;
@@ -850,7 +813,7 @@
     .step-icon { font-size: 1.5rem; margin-bottom: 1rem; display: block; }
 
     .step-title {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 0.8rem;
@@ -908,7 +871,7 @@
     }
 
     .service-title {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
@@ -1014,7 +977,7 @@
       border-radius: 8px;
       padding: 8px 12px;
       color: var(--text2);
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.82rem;
       outline: none;
     }
@@ -1074,7 +1037,7 @@
     .stat-card:hover { border-color: var(--border); }
 
     .stat-num {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
       font-weight: 800;
       background: var(--grad);
@@ -1131,7 +1094,7 @@
     }
 
     .precio-name {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
@@ -1146,7 +1109,7 @@
       margin-bottom: 0.5rem;
     }
     .precio-eur {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
       font-weight: 800;
     }
@@ -1175,7 +1138,7 @@
       width: 100%;
       padding: 12px;
       border-radius: 10px;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.9rem;
       font-weight: 600;
       cursor: pointer;
@@ -1237,7 +1200,7 @@
       cursor: pointer;
       text-align: left;
       color: var(--text);
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.95rem;
       font-weight: 500;
     }
@@ -1275,17 +1238,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(139,92,246,0.2) 0%, rgba(6,182,212,0.15) 100%);
-      pointer-events: none;
-    }
-
-    #cta-final::after {
-      content: '';
-      position: absolute;
-      width: 800px; height: 800px;
-      background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 60%);
-      top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
+      background: linear-gradient(135deg, rgba(124,109,240,0.1) 0%, rgba(56,189,248,0.06) 100%);
       pointer-events: none;
     }
 
@@ -1326,7 +1279,7 @@
 
     .footer-top {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
       gap: 3rem;
       margin-bottom: 3rem;
     }
@@ -1456,7 +1409,7 @@
       border: none;
       border-radius: 8px;
       color: white;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.82rem;
       font-weight: 600;
       cursor: pointer;
@@ -1467,12 +1420,157 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       color: var(--text2);
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.82rem;
       cursor: pointer;
     }
 
     #cookie-banner.hidden { display: none; }
+
+    /* ── ROI BLOCK ── */
+    .roi-block {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-top: 3rem;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(135deg, rgba(139,92,246,0.12), rgba(6,182,212,0.08));
+      border: 1px solid rgba(139,92,246,0.25);
+      border-radius: 16px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .roi-icon { font-size: 2rem; flex-shrink: 0; }
+    .roi-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 0.2rem;
+    }
+    .roi-text {
+      font-size: 0.95rem;
+      color: var(--text2);
+      line-height: 1.5;
+    }
+
+    /* ── WHATSAPP DEMO CTA ── */
+    .demo-whatsapp-cta {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .btn-whatsapp-demo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: #25D366;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    }
+    .btn-whatsapp-demo:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.45);
+    }
+
+    /* ── TARJETA ROI + FACILIDADES ── */
+    .precios-roi-card {
+      margin-top: 3rem;
+      padding: 2rem 2.5rem;
+      background: linear-gradient(135deg, rgba(124,109,240,0.08), rgba(56,189,248,0.05));
+      border: 1px solid rgba(124,109,240,0.2);
+      border-radius: 20px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .roi-card-inner {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .roi-card-icon {
+      font-size: 2.2rem;
+      flex-shrink: 0;
+    }
+    .roi-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 0.3rem;
+    }
+    .roi-card-text {
+      font-size: 0.95rem;
+      color: var(--text2);
+      line-height: 1.5;
+    }
+    .roi-card-text strong {
+      color: var(--text);
+    }
+    .roi-card-divider {
+      height: 1px;
+      background: rgba(124,109,240,0.15);
+      margin: 1.5rem 0;
+    }
+    .roi-card-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .facilidades-badge {
+      display: inline-block;
+      padding: 8px 20px;
+      background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(6,182,212,0.15));
+      border: 1px solid rgba(139,92,246,0.35);
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .facilidades-sub {
+      font-size: 0.85rem;
+      color: var(--text2);
+      margin-top: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .btn-diagnostico {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--bg3);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1.5px solid var(--cyan);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+    .btn-diagnostico:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(6,182,212,0.25);
+      background: rgba(6,182,212,0.1);
+    }
+
+    @media (max-width: 900px) {
+      .roi-block { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 640px) {
+      .btn-whatsapp-demo { font-size: 0.88rem; padding: 12px 20px; }
+      .precios-facilidades { padding: 1.5rem 1rem; }
+      .facilidades-badge { font-size: 0.8rem; padding: 6px 14px; }
+    }
 
   </style>
 </head>
@@ -1556,7 +1654,7 @@
   <div class="hero-social-proof">
     <span>✅ Funciona de verdad — pruébalo aquí abajo</span>
     <span class="proof-sep">·</span>
-    <span>Listo en 48 horas</span>
+    <span>Listo en menos de 1 semana</span>
     <span class="proof-sep">·</span>
     <span>Valencia, España</span>
   </div>
@@ -1649,7 +1747,7 @@
     border-radius: 8px;
     padding: 9px 12px;
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.82rem;
     outline: none;
     transition: border-color 0.2s;
@@ -1714,7 +1812,7 @@
     display: flex; align-items: center; justify-content: space-between;
   }
   .cal-month-title {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 0.95rem; font-weight: 700;
   }
   .cal-nav-btn {
@@ -1786,7 +1884,7 @@
     color: var(--text2);
     font-size: 0.78rem;
     cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     transition: all 0.2s;
   }
   .slot-btn:hover { border-color: var(--violet); color: var(--violet); background: rgba(139,92,246,0.1); }
@@ -1926,6 +2024,13 @@
       <span>💡</span>
       <span>Prueba a escribir: <em>"quiero cita para mañana"</em> · <em>"¿cuánto cuesta?"</em> · <em>"tengo el hombro mal"</em></span>
     </div>
+
+    <div class="demo-whatsapp-cta">
+      <a href="https://wa.me/34620502131?text=Hola%2C%20quiero%20probar%20el%20bot%20demo" target="_blank" rel="noopener" class="btn-whatsapp-demo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Prueba el bot en tu propio WhatsApp ahora mismo
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1997,6 +2102,14 @@
         <p class="pain-desc">Mensajes a las 8 de la mañana, en fin de semana, en vacaciones. El cliente que espera más de 1 hora se va.</p>
       </div>
     </div>
+
+    <div class="roi-block reveal">
+      <div class="roi-icon">💰</div>
+      <div class="roi-content">
+        <div class="roi-title">Ahorro estimado</div>
+        <p class="roi-text">Recuperando solo 2 o 3 citas perdidas al mes, el bot se paga solo.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2046,7 +2159,7 @@
   <div class="container">
     <div class="reveal" style="text-align:center">
       <span class="section-tag">Servicios</span>
-      <h2 class="section-h2">¿Qué hace el bot<br>por ti?</h2>
+      <h2 class="section-h2">¿Qué hace el bot de WhatsApp<br>por tu negocio?</h2>
       <p class="section-sub" style="margin:0 auto">Se adapta a tu negocio. Tú nos cuentas cómo trabajas y nosotros lo configuramos todo.</p>
     </div>
 
@@ -2130,7 +2243,7 @@
   <div class="container">
     <div class="reveal" style="text-align:center">
       <span class="section-tag">Precios</span>
-      <h2 class="section-h2">Planes sin sorpresas</h2>
+      <h2 class="section-h2">Bot de WhatsApp para negocios:<br>planes sin sorpresas</h2>
       <p class="section-sub" style="margin:0 auto">Sin permanencia. Cancela cuando quieras. El precio incluye configuración, mantenimiento y soporte.</p>
     </div>
 
@@ -2191,6 +2304,23 @@
         <a href="#contacto" class="btn-full outline">Hablemos</a>
       </div>
     </div>
+
+    <div class="precios-roi-card reveal">
+      <div class="roi-card-inner">
+        <div class="roi-card-icon">💰</div>
+        <div class="roi-card-content">
+          <h3 class="roi-card-title">Ahorro estimado</h3>
+          <p class="roi-card-text">Con recuperar solo <strong>2 citas perdidas al mes</strong>, la automatización se paga sola.</p>
+        </div>
+      </div>
+      <div class="roi-card-divider"></div>
+      <div class="roi-card-footer">
+        <span class="facilidades-badge">🤝 Facilidades de pago en el alta disponibles</span>
+        <a href="https://wa.me/34620502131?text=Hola%2C%20quiero%20una%20llamada%20de%20diagn%C3%B3stico%20gratuita" target="_blank" rel="noopener" class="btn-diagnostico">
+          📞 Agendar llamada de diagnóstico gratuita
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2202,7 +2332,7 @@
   <div class="container">
     <div class="reveal" style="text-align:center">
       <span class="section-tag">FAQ</span>
-      <h2 class="section-h2">Preguntas frecuentes</h2>
+      <h2 class="section-h2">Preguntas frecuentes sobre<br>automatización para negocios locales</h2>
     </div>
 
     <div class="faq-list">
@@ -2311,6 +2441,16 @@
           <img src="nodobots-logo.png" alt="NodoBots" class="nav-logo-img">
         </a>
         <p>Automatización inteligente para negocios locales. Bots de WhatsApp y Telegram que trabajan mientras tú descansas.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sectores</h4>
+        <ul>
+          <li><a href="fisios.html">Fisioterapia</a></li>
+          <li><a href="dentistas.html">Clínicas Dentales</a></li>
+          <li><a href="peluquerias.html">Peluquerías</a></li>
+          <li><a href="restaurantes.html">Restaurantes</a></li>
+          <li><a href="talleres.html">Talleres Mecánicos</a></li>
+        </ul>
       </div>
       <div class="footer-col">
         <h4>Servicios</h4>
@@ -3093,7 +3233,7 @@ window.addEventListener('scroll', () => {
   max-height: 80vh;
   overflow-y: auto;
   color: #F4F4F5;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   box-shadow: 0 25px 60px rgba(0,0,0,0.6);
 }
 .legal-modal h2 {

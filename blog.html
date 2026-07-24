@@ -88,10 +88,9 @@
     /* ARTICLE CARD */
     .article-card { background: rgba(28,28,40,0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.07); border-radius: 20px; overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; }
     .article-card:hover { border-color: rgba(139,92,246,0.4); transform: translateY(-5px); box-shadow: 0 24px 48px rgba(139,92,246,0.1); }
-    .card-thumb { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; overflow: hidden; }
-    .card-thumb.peluqueria { background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(6,182,212,0.2)); }
-    .card-thumb.fisio { background: linear-gradient(135deg, rgba(16,185,129,0.3), rgba(6,182,212,0.2)); }
-    .card-thumb.dental { background: linear-gradient(135deg, rgba(59,130,246,0.3), rgba(139,92,246,0.2)); }
+    .card-thumb { height: 200px; position: relative; overflow: hidden; background-size: cover; background-position: center; }
+    .card-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .article-card:hover .card-thumb img { transform: scale(1.05); }
     .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
     .card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem; flex-wrap: wrap; }
     .card-tag { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 3px 10px; border-radius: 100px; border: 1px solid var(--border); color: var(--violet); background: rgba(139,92,246,0.08); }
@@ -202,7 +201,7 @@
 
       <!-- ARTÍCULO 1 — PUBLICADO -->
       <a href="bot-whatsapp-peluqueria.html" class="article-card reveal">
-        <div class="card-thumb peluqueria">💇</div>
+        <div class="card-thumb"><img src="img/salon-peluqueria.jpg" alt="Bot WhatsApp para peluquerías" loading="lazy"></div>
         <div class="card-body">
           <div class="card-meta">
             <span class="card-tag">💇 Peluquerías</span>
@@ -217,7 +216,7 @@
 
       <!-- ARTÍCULO 2 — PUBLICADO -->
       <a href="bot-whatsapp-fisioterapia.html" class="article-card reveal">
-        <div class="card-thumb fisio">🏥</div>
+        <div class="card-thumb"><img src="img/clinica-fisioterapia.jpg" alt="Bot WhatsApp para fisioterapeutas" loading="lazy"></div>
         <div class="card-body">
           <div class="card-meta">
             <span class="card-tag">🏥 Fisioterapia</span>
@@ -230,12 +229,50 @@
         </div>
       </a>
 
-      <!-- PRÓXIMAMENTE 2 -->
-      <div class="coming-soon reveal">
-        <div class="cs-icon">🦷</div>
-        <h3>Bots para clínicas dentales</h3>
-        <p>Próximamente · Julio 2026</p>
-      </div>
+      <!-- ARTÍCULO 3 — DENTISTAS (enlace a landing) -->
+      <a href="dentistas.html" class="article-card reveal">
+        <div class="card-thumb"><img src="img/clinica-dental.jpg" alt="Bot WhatsApp para clínicas dentales" loading="lazy"></div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag">🦷 Dentistas</span>
+            <span class="card-date">Julio 2026</span>
+            <span class="card-read">7 min</span>
+          </div>
+          <div class="card-title">Bot de WhatsApp para clínicas dentales: agenda llena sin coger el teléfono</div>
+          <p class="card-excerpt">Cómo un bot gestiona citas de revisión, limpiezas y urgencias, manda recordatorios y reduce cancelaciones en tu clínica dental.</p>
+          <span class="card-link">Ver solución para dentistas →</span>
+        </div>
+      </a>
+
+      <!-- ARTÍCULO 4 — RESTAURANTES (enlace a landing) -->
+      <a href="restaurantes.html" class="article-card reveal">
+        <div class="card-thumb"><img src="img/restaurante-interior.jpg" alt="Bot WhatsApp para restaurantes" loading="lazy"></div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag">🍽️ Restaurantes</span>
+            <span class="card-date">Julio 2026</span>
+            <span class="card-read">6 min</span>
+          </div>
+          <div class="card-title">Bot de WhatsApp para restaurantes: reservas automáticas por WhatsApp</div>
+          <p class="card-excerpt">Tu bot recibe reservas de mesa, confirma disponibilidad y avisa al equipo. Sin llamadas perdidas en hora punta.</p>
+          <span class="card-link">Ver solución para restaurantes →</span>
+        </div>
+      </a>
+
+      <!-- ARTÍCULO 5 — TALLERES (enlace a landing) -->
+      <a href="talleres.html" class="article-card reveal">
+        <div class="card-thumb"><img src="img/taller-mecanico.jpg" alt="Bot WhatsApp para talleres mecánicos" loading="lazy"></div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag">🔧 Talleres</span>
+            <span class="card-date">Julio 2026</span>
+            <span class="card-read">6 min</span>
+          </div>
+          <div class="card-title">Bot de WhatsApp para talleres mecánicos: citas de ITV y revisiones sin líos</div>
+          <p class="card-excerpt">Gestiona citas de ITV, cambios de aceite y revisiones desde WhatsApp. El cliente escribe, el bot agenda.</p>
+          <span class="card-link">Ver solución para talleres →</span>
+        </div>
+      </a>
 
     </div>
   </div>
