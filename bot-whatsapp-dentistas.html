@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot de WhatsApp para clínicas dentales: agenda llena sin coger el teléfono | Nodo</title>
+  <meta name="description" content="Cómo un bot de WhatsApp gestiona las citas de tu clínica dental, reduce las ausencias y atiende urgencias fuera de horario sin que nadie descuelgue el teléfono.">
+  <meta name="author" content="Nodo Bots">
+  <meta name="keywords" content="bot whatsapp dentistas, chatbot clinica dental, automatizar citas dentista, recordatorios citas dentista, bot reservas dentista valencia alzira, whatsapp business clinica dental">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nodobots.com/bot-whatsapp-dentistas.html">
+  <meta property="og:title" content="Bot de WhatsApp para clínicas dentales: agenda llena sin coger el teléfono">
+  <meta property="og:description" content="Cómo un bot de WhatsApp gestiona citas, reduce ausencias y atiende consultas de urgencia fuera de horario en tu clínica dental.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nodobots.com/bot-whatsapp-dentistas.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Nodo Bots">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bot de WhatsApp para clínicas dentales: agenda llena sin coger el teléfono">
+  <meta name="twitter:description" content="Gestiona citas, recordatorios y consultas de urgencia de tu clínica dental por WhatsApp, sin que nadie tenga que estar pendiente del móvil.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Bot de WhatsApp para clínicas dentales: agenda llena sin coger el teléfono",
+    "description": "Guía práctica sobre cómo un bot de WhatsApp gestiona las citas de tu clínica dental, reduce las ausencias y atiende consultas fuera de horario.",
+    "author": {"@type": "Organization", "name": "Nodo Bots"},
+    "publisher": {"@type": "Organization", "name": "Nodo Bots", "url": "https://nodobots.com"},
+    "datePublished": "2026-09-23",
+    "dateModified": "2026-09-23",
+    "url": "https://nodobots.com/bot-whatsapp-dentistas.html",
+    "inLanguage": "es"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-bg: #f9f8f6;
+      --color-surface: #ffffff;
+      --color-text: #1a1a1a;
+      --color-text-muted: #6b7280;
+      --color-accent: #0d9488;
+      --color-accent-light: #ccfbf1;
+      --color-border: #e5e7eb;
+      --color-highlight: #fef9c3;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-editorial: 'Lora', serif;
+      --max-w: 740px;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    nav { background: #fff; border-bottom: 1px solid var(--color-border); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { height: 32px; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--color-text-muted); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--color-accent); }
+    .nav-cta { background: var(--color-accent); color: #fff; padding: 8px 18px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    .article-hero { background: linear-gradient(135deg, #134e4a 0%, #0d9488 60%, #2dd4bf 100%); padding: 72px 24px 80px; text-align: center; }
+    .article-hero .breadcrumb { color: rgba(255,255,255,0.7); font-size: 13px; margin-bottom: 20px; letter-spacing: .04em; text-transform: uppercase; }
+    .article-hero .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    .article-hero .breadcrumb a:hover { color: #fff; }
+    .article-hero h1 { font-family: var(--font-editorial); font-size: clamp(28px, 5vw, 48px); font-weight: 600; color: #fff; max-width: 760px; margin: 0 auto 20px; line-height: 1.25; }
+    .article-hero .subtitle { color: rgba(255,255,255,0.85); font-size: 18px; max-width: 560px; margin: 0 auto 32px; font-weight: 400; }
+    .article-meta { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .article-meta span { color: rgba(255,255,255,0.75); font-size: 13px; display: flex; align-items: center; gap: 5px; }
+    .badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+
+    .article-wrap { max-width: var(--max-w); margin: 0 auto; padding: 60px 24px 80px; }
+    .toc { background: var(--color-surface); border: 1px solid var(--color-border); border-left: 4px solid var(--color-accent); border-radius: var(--radius); padding: 24px 28px; margin-bottom: 48px; }
+    .toc h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--color-text-muted); font-weight: 700; margin-bottom: 14px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 8px; }
+    .toc a { color: var(--color-accent); text-decoration: none; font-size: 15px; font-weight: 500; }
+    .toc a:hover { text-decoration: underline; }
+
+    .prose p { margin-bottom: 24px; color: #374151; }
+    .prose h2 { font-family: var(--font-editorial); font-size: 28px; font-weight: 600; color: var(--color-text); margin: 52px 0 20px; line-height: 1.3; scroll-margin-top: 80px; }
+    .prose h3 { font-size: 19px; font-weight: 700; color: var(--color-text); margin: 36px 0 14px; }
+    .prose strong { color: var(--color-text); font-weight: 700; }
+    .prose ul, .prose ol { padding-left: 22px; margin-bottom: 24px; }
+    .prose li { margin-bottom: 10px; color: #374151; }
+
+    .highlight-box { background: var(--color-highlight); border-left: 4px solid #ca8a04; border-radius: var(--radius); padding: 20px 24px; margin: 32px 0; font-size: 16px; color: #713f12; font-style: italic; font-family: var(--font-editorial); }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 32px 0; }
+    .stat-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 20px; text-align: center; }
+    .stat-card .stat-num { font-size: 36px; font-weight: 800; color: var(--color-accent); display: block; line-height: 1; margin-bottom: 6px; }
+    .stat-card .stat-label { font-size: 13px; color: var(--color-text-muted); font-weight: 500; }
+
+    .convo-box { background: #f0fdfa; border: 1px solid #99f6e4; border-radius: var(--radius); padding: 24px; margin: 32px 0; }
+    .convo-box h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: #0f766e; font-weight: 700; margin-bottom: 16px; }
+    .msg { display: flex; flex-direction: column; margin-bottom: 12px; }
+    .msg.client { align-items: flex-end; }
+    .msg.bot { align-items: flex-start; }
+    .msg-bubble { max-width: 85%; padding: 10px 14px; border-radius: 16px; font-size: 14px; line-height: 1.5; }
+    .msg.client .msg-bubble { background: #ccfbf1; color: #134e4a; border-bottom-right-radius: 4px; }
+    .msg.bot .msg-bubble { background: #fff; border: 1px solid #99f6e4; color: #374151; border-bottom-left-radius: 4px; }
+    .msg-sender { font-size: 11px; color: #6b7280; margin-bottom: 4px; font-weight: 600; }
+
+    .compare-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--color-border); }
+    .compare-table th { background: var(--color-accent); color: #fff; padding: 12px 16px; text-align: left; font-weight: 700; font-size: 13px; }
+    .compare-table td { padding: 12px 16px; border-bottom: 1px solid var(--color-border); color: #374151; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:nth-child(even) td { background: #f9fafb; }
+    .tick { color: #16a34a; font-weight: 700; }
+    .cross { color: #dc2626; font-weight: 700; }
+
+    .callout { background: var(--color-accent-light); border: 1px solid #5eead4; border-radius: var(--radius); padding: 24px 28px; margin: 36px 0; display: flex; gap: 16px; align-items: flex-start; }
+    .callout-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+    .callout-body h4 { font-size: 16px; font-weight: 700; color: #0f766e; margin-bottom: 6px; }
+    .callout-body p { color: #134e4a; font-size: 15px; margin: 0; }
+
+    .step-list { list-style: none; padding: 0; margin: 28px 0; }
+    .step-item { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+    .step-num { background: var(--color-accent); color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+    .step-content h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .step-content p { font-size: 15px; color: #374151; margin: 0; }
+
+    .cta-block { background: linear-gradient(135deg, #134e4a, #0d9488); border-radius: 16px; padding: 44px 40px; text-align: center; margin: 56px 0 0; }
+    .cta-block h2 { font-family: var(--font-editorial); font-size: 28px; color: #fff; margin-bottom: 12px; }
+    .cta-block p { color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 28px; }
+    .cta-block a { display: inline-block; background: #fff; color: var(--color-accent); padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: 16px; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+    .cta-block a:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+    .cta-sub { color: rgba(255,255,255,0.65) !important; font-size: 13px !important; margin-top: 14px !important; margin-bottom: 0 !important; }
+
+    footer { background: #111827; color: rgba(255,255,255,0.6); text-align: center; padding: 32px 24px; font-size: 14px; }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    footer a:hover { color: #fff; }
+    footer .footer-logo { color: #fff; font-weight: 800; font-size: 18px; margin-bottom: 12px; display: block; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .article-hero { padding: 48px 20px 56px; }
+      .article-wrap { padding: 40px 20px 60px; }
+      .cta-block { padding: 32px 24px; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://nodobots.com/" class="nav-logo">
+      <img src="https://nodobots.com/nodobots-logo.png" alt="NodoBots">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://nodobots.com/fisios.html">Fisioterapia</a></li>
+      <li><a href="https://nodobots.com/dentistas.html">Clínicas Dentales</a></li>
+      <li><a href="https://nodobots.com/peluquerias.html">Peluquerías</a></li>
+      <li><a href="https://nodobots.com/restaurantes.html">Restaurantes</a></li>
+      <li><a href="https://nodobots.com/blog.html">Blog</a></li>
+    </ul>
+    <a href="https://nodobots.com/#contacto" class="nav-cta">Demo gratuita →</a>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <p class="breadcrumb">
+    <a href="https://nodobots.com/">Inicio</a> → <a href="https://nodobots.com/blog.html">Blog</a> → Clínicas Dentales
+  </p>
+  <h1>Bot de WhatsApp para clínicas dentales: agenda llena sin coger el teléfono</h1>
+  <p class="subtitle">Son las 23:20 y alguien con un dolor de muelas está buscando "dentista urgencias" en Google. ¿Le contestas tú o el de al lado?</p>
+  <div class="article-meta">
+    <span class="badge">🦷 Clínicas Dentales</span>
+    <span>📅 Septiembre 2026</span>
+    <span>⏱️ 8 min de lectura</span>
+    <span>✍️ Nodo Bots · Valencia</span>
+  </div>
+</header>
+
+<main class="article-wrap">
+
+  <nav class="toc" aria-label="Índice del artículo">
+    <h2>En este artículo</h2>
+    <ol>
+      <li><a href="#urgencia">La búsqueda a las 23:00 que no llega a tu clínica</a></li>
+      <li><a href="#que-es">Qué es un bot de WhatsApp para una clínica dental</a></li>
+      <li><a href="#que-hace">Qué gestiona el bot y qué se queda para el equipo clínico</a></li>
+      <li><a href="#ausencias">Por qué se llenan los huecos vacíos de la agenda</a></li>
+      <li><a href="#ejemplo">Una urgencia real, gestionada un domingo por la noche</a></li>
+      <li><a href="#comparativa">Bot vs recepción vs no hacer nada</a></li>
+      <li><a href="#empezar">Cómo se pone en marcha en tu clínica</a></li>
+    </ol>
+  </nav>
+
+  <div class="prose">
+
+    <p>Domingo, 23:20. A alguien le ha empezado a doler una muela hace tres horas y ya no aguanta más. Coge el móvil y busca "dentista urgencias" cerca de casa. Le salen seis clínicas. Escribe por WhatsApp a las tres primeras porque es lo más rápido que tiene a mano.</p>
+
+    <p>La primera no contesta hasta el lunes a las 9. La segunda tampoco. La tercera responde en dos minutos, aunque sea un bot, le da un hueco para primera hora del lunes y le dice qué hacer mientras tanto. ¿A cuál de las tres crees que va a ir?</p>
+
+    <p>Esto pasa todos los fines de semana, en algún punto de tu zona. La pregunta no es si va a pasar. Es si la clínica que contesta primero eres tú.</p>
+
+    <h2 id="urgencia">La búsqueda a las 23:00 que no llega a tu clínica</h2>
+
+    <p>Una clínica dental no vive solo de revisiones programadas con dos semanas de antelación. Vive también de quien te escribe con dolor, de quien se le ha roto un diente comiendo, de quien necesita hueco "para esta semana, cuanto antes mejor". Y ese tipo de paciente no espera a que abras el lunes.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="stat-num">32%</span>
+        <span class="stat-label">de los pacientes en España suele pedir cita médica a partir de las 19h</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">12-18%</span>
+        <span class="stat-label">de ausencias de media en consultas dentales; hasta 25% en primeras visitas</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">34%</span>
+        <span class="stat-label">menos ausencias con recordatorios automáticos, según estudios clínicos</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">98%</span>
+        <span class="stat-label">de tasa de apertura de los mensajes de WhatsApp, frente al email o SMS</span>
+      </div>
+    </div>
+
+    <p>Nadie de tu equipo tiene que estar mirando el móvil un domingo por la noche para que esa persona reciba respuesta. Pero si nadie contesta, esa persona no espera. Escribe a la siguiente clínica de la lista.</p>
+
+    <div class="highlight-box">
+      "El paciente con dolor no está comparando presupuestos ni leyendo reseñas con calma. Está buscando quién le puede ver antes. Gana la clínica que responde primero, no la que tiene mejor precio."
+    </div>
+
+    <h2 id="que-es">Qué es un bot de WhatsApp para una clínica dental</h2>
+
+    <p>Es un asistente conectado a tu WhatsApp Business que responde por ti cuando tu recepción está cerrada, tu equipo está con un paciente en el sillón, o simplemente es fuera de horario. No hace diagnósticos ni sustituye al odontólogo — gestiona la parte administrativa que hoy te quita tiempo: agenda, dudas frecuentes y primer contacto.</p>
+
+    <p>El paciente no tiene que aprender nada nuevo. Escribe "me duele una muela desde ayer, ¿tenéis hueco esta semana?" y el bot entiende la petición, consulta tu agenda real y responde con huecos concretos, sin menús ni "pulse 1 para revisiones".</p>
+
+    <div class="callout">
+      <span class="callout-icon">💡</span>
+      <div class="callout-body">
+        <h4>No reemplaza el criterio clínico</h4>
+        <p>Si alguien describe algo que suena a urgencia seria, el bot puede dar unas primeras indicaciones básicas y avisar directamente al equipo, en vez de dejarlo esperando hasta el lunes. El criterio médico siempre lo pone tu clínica, no el bot.</p>
+      </div>
+    </div>
+
+    <h2 id="que-hace">Qué gestiona el bot y qué se queda para el equipo clínico</h2>
+
+    <h3>Lo que resuelve solo</h3>
+    <ul>
+      <li><strong>Reserva y reordena citas:</strong> revisiones, limpiezas, primeras visitas, según la disponibilidad real de cada profesional.</li>
+      <li><strong>Responde lo que preguntan siempre:</strong> precios orientativos, si aceptáis un seguro concreto, si hace falta traer una radiografía previa, dirección y aparcamiento.</li>
+      <li><strong>Manda recordatorios:</strong> 48h y 3h antes de cada cita, con opción de confirmar o pedir cambio desde el mismo WhatsApp.</li>
+      <li><strong>Da un primer filtro en consultas de urgencia:</strong> recoge los síntomas, avisa al equipo si suena grave y ofrece el primer hueco disponible.</li>
+      <li><strong>Libera huecos al momento:</strong> si alguien cancela, la agenda se actualiza sola y ese hueco puede ofrecerse a otro paciente.</li>
+    </ul>
+
+    <h3>Lo que sigue siendo cosa tuya</h3>
+    <ul>
+      <li>Cualquier diagnóstico, valoración clínica o decisión sobre tratamiento.</li>
+      <li>Explicar presupuestos complejos o resolver dudas sobre un tratamiento en curso — ahí el bot deriva la conversación a tu equipo.</li>
+      <li>Las urgencias graves, donde lo que hace falta es una persona al teléfono, no un mensaje.</li>
+    </ul>
+
+    <h2 id="ausencias">Por qué se llenan los huecos vacíos de la agenda</h2>
+
+    <p>En una clínica dental un hueco vacío pesa más que en casi cualquier otro negocio: el sillón, el higienista y el tiempo del profesional están reservados igual, haya venido el paciente o no. Y la primera visita es la que más se cae — con diferencia, la gente se olvida más de algo que aún no le importa tanto como una revisión que ya lleva tiempo esperando.</p>
+
+    <p>La causa casi nunca es que el paciente no quiera venir. Es que se le olvidó entre el trabajo, los niños y las quince cosas que tenía esa semana. Un recordatorio bien puesto soluciona justo eso.</p>
+
+    <div class="callout">
+      <span class="callout-icon">📊</span>
+      <div class="callout-body">
+        <h4>Lo que dicen los números</h4>
+        <p>Los estudios sobre recordatorios automáticos en consultas sanitarias muestran reducciones medias de en torno al 34% en las ausencias. Si tu clínica tiene 2-3 no-shows a la semana con un ticket medio de 80€, hablamos de varios cientos de euros al mes que hoy se quedan en huecos vacíos.</p>
+      </div>
+    </div>
+
+    <p>Y hay un segundo efecto, menos evidente: cuando alguien cancela con margen porque el recordatorio se lo ha puesto fácil, ese hueco puede ofrecerse a quien lleva días esperando cita.</p>
+
+    <h2 id="ejemplo">Una urgencia real, gestionada un domingo por la noche</h2>
+
+    <p>Así se vería la conversación del ejemplo del principio, con el bot ya funcionando en tu clínica.</p>
+
+    <div class="convo-box">
+      <h4>💬 Conversación real — WhatsApp · Domingo, 23:22h</h4>
+
+      <div class="msg client">
+        <span class="msg-sender">Marta Ibáñez</span>
+        <div class="msg-bubble">Hola, llevo desde esta tarde con un dolor fuerte en una muela de abajo, no se me pasa ni con ibuprofeno. Podeis verme mañana?</div>
+      </div>
+
+      <div class="msg bot">
+        <span class="msg-sender">Nodo · Tu Clínica Dental</span>
+        <div class="msg-bubble">Hola Marta, siento el dolor que llevas. Puedo darte cita a primera hora de mañana para que te vean cuanto antes:<br><br>📅 Lunes 24 — 9:00h (primer hueco del día)<br><br>Mientras tanto, evita el lado que te duele al masticar y mantén la zona fría si notas hinchazón. Si el dolor sube mucho o te sube fiebre, dímelo y avisamos directamente al equipo. ¿Te reservo las 9:00?</div>
+      </div>
+
+      <div class="msg client">
+        <span class="msg-sender">Marta Ibáñez</span>
+        <div class="msg-bubble">Si porfa, las 9 perfecto</div>
+      </div>
+
+      <div class="msg bot">
+        <span class="msg-sender">Nodo · Tu Clínica Dental</span>
+        <div class="msg-bubble">✅ Cita confirmada:<br><br>📅 Lunes 24 · 9:00h<br>🦷 Urgencia — dolor dental<br>👤 Marta Ibáñez<br>📍 Av. Constitución 22, Alzira<br><br>Te espera el Dr. Soler. Trae, si tienes, alguna radiografía dental reciente. Descansa como puedas esta noche — mañana lo vemos.</div>
+      </div>
+    </div>
+
+    <p>Cuando el equipo llega el lunes a las 8:30, ya tiene una urgencia real agendada a primera hora, con los síntomas anotados. Nadie tuvo que interrumpir su domingo para conseguirlo.</p>
+
+    <h2 id="comparativa">Bot vs recepción vs no hacer nada</h2>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Bot WhatsApp</th>
+          <th>Recepción en horario</th>
+          <th>Sin gestión fuera de horario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Responde fuera de horario</td>
+          <td class="tick">✓ Sí, siempre</td>
+          <td class="cross">✗ No</td>
+          <td class="cross">✗ No</td>
+        </tr>
+        <tr>
+          <td>Primer filtro en urgencias</td>
+          <td class="tick">✓ Sí</td>
+          <td class="tick">✓ En horario</td>
+          <td class="cross">✗ Nadie</td>
+        </tr>
+        <tr>
+          <td>Recordatorios automáticos</td>
+          <td class="tick">✓ Sí</td>
+          <td class="cross">✗ Manual</td>
+          <td class="cross">✗ Ninguno</td>
+        </tr>
+        <tr>
+          <td>El paciente usa WhatsApp, sin llamar</td>
+          <td class="tick">✓ Sí</td>
+          <td class="cross">✗ Teléfono</td>
+          <td class="cross">✗ —</td>
+        </tr>
+        <tr>
+          <td>Coste mensual</td>
+          <td>Desde 97€</td>
+          <td>Sueldo completo</td>
+          <td>Pacientes que se van a otra clínica</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>No es sustituir a tu recepción — es cubrir las horas en las que hoy nadie contesta. La mayoría de clínicas pierden pacientes nuevos precisamente en esas franjas: noches, fines de semana, la hora de la comida.</p>
+
+    <h2 id="empezar">Cómo se pone en marcha en tu clínica</h2>
+
+    <p>No hace falta cambiar de sistema de gestión ni tocar cómo trabaja tu equipo hoy. Si usáis Google Calendar (o podemos sincronizarlo con vuestro software de gestión dental) y WhatsApp Business, ya está casi todo listo.</p>
+
+    <ul class="step-list">
+      <li class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Una llamada de 30 minutos</h4>
+          <p>Nos cuentas cómo funciona tu clínica: profesionales, servicios, precios orientativos, seguros que aceptáis, y las preguntas que más se repiten.</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Configuración en unos días</h4>
+          <p>Conectamos el bot a vuestro WhatsApp Business y a la agenda. Definimos juntos cómo debe tratar las consultas de urgencia.</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Revisamos las primeras conversaciones</h4>
+          <p>Ajustamos el tono y las respuestas contigo hasta que suene exactamente como quieres que suene tu clínica.</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>El equipo se centra en la consulta</h4>
+          <p>La agenda llega ya organizada. Las urgencias fuera de horario, filtradas y con primer hueco asignado.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="callout">
+      <span class="callout-icon">📍</span>
+      <div class="callout-body">
+        <h4>Somos de aquí</h4>
+        <p>Trabajamos con clínicas en Alzira, Valencia y la Ribera Alta. Si prefieres verlo en persona, quedamos y te lo explicamos con un café de por medio. Soporte en español, por WhatsApp, y contestamos nosotros.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cta-block">
+    <h2>¿Quieres ver cómo quedaría en tu clínica?</h2>
+    <p>Te hacemos una demo con los datos reales de tu negocio. En 30 minutos sabes si te compensa y cuánto.</p>
+    <a href="https://nodobots.com/#contacto">Pedir demo gratuita →</a>
+    <p class="cta-sub">Sin permanencia · Sin compromiso · Hecho en Valencia</p>
+  </div>
+
+</main>
+
+<footer>
+  <span class="footer-logo">Nodo</span>
+  Automatización inteligente para negocios locales · Valencia, España<br><br>
+  <a href="https://nodobots.com/">Inicio</a> ·
+  <a href="https://nodobots.com/blog.html">Blog</a> ·
+  <a href="https://nodobots.com/dentistas.html">Clínicas Dentales</a> ·
+  <a href="https://nodobots.com/#contacto">Contacto</a><br><br>
+  © 2026 Nodo · Todos los derechos reservados
+</footer>
+
+</body>
+</html>
