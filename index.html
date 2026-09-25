@@ -2954,6 +2954,16 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     mode: 'no-cors'
   });
 
+  // Aviso a Telegram + hoja de clientes (asistente NodoBots en Make)
+  fetch('https://hook.eu2.make.com/fftlsklfxwg3huwoqb26vhgi113mwdfj', {
+    method: 'POST',
+    body: new URLSearchParams({
+      conversacion: '',
+      mensaje: '[FORMULARIO] Solicitud de demo gratuita desde la web. Nombre: ' + document.getElementById('f-nombre').value.trim() + '. WhatsApp: ' + document.getElementById('f-telefono').value.trim(),
+      origen: 'Formulario web'
+    })
+  }).catch(function(){});
+
   // Mostrar confirmación
   var msg = document.getElementById('form-msg');
   msg.style.display = 'block';
