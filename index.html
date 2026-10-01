@@ -2807,8 +2807,8 @@ function showBotTyping(callback) {
 function getIntent(text) {
   const t = text.toLowerCase();
   if (/hola|buenas|buenos|hey/.test(t)) return 'saludo';
+  if (/precio|cuánto|cuanto|cuesta|coste|tarifa|cobr/.test(t)) return 'precio';
   if (/cita|reserv|apunt|pedir|quiero|necesit|mañana|semana|lunes|martes|miércoles|jueves|viernes|sábado|domingo|día/.test(t)) return 'reserva';
-  if (/precio|cuánto|cuesta|coste|tarifa/.test(t)) return 'precio';
   if (/horario|hora|cuándo|cuando|abierto|abren/.test(t)) return 'horario';
   if (/cancelar|anular|quitar|borrar/.test(t)) return 'cancelar';
   if ((sectorActual === 'clinica' || sectorActual === 'dentista') && /dolor|duele|mal|lesión|lesion|espalda|cervical|lumbar|hombro|rodilla|cuello|pierna/.test(t)) return 'sintoma';
@@ -2906,7 +2906,7 @@ function processMessage(text) {
     const hour = demoState.pendingHour;
     demoState.step = 'esperando-confirmacion';
     showBotTyping(() => {
-      addPanelMsg(`Perfecto. Aquí el resumen de tu cita:\n📅 ${day} de ${MESES[month]} a las ${hour}\n👤 ${demoState.userName}\n📞 ${phoneClean}\n\n¿Es todo correcto? Escribe SÍ para confirmar.`, 'bot');
+      addPanelMsg(`Perfecto. Aquí el resumen de tu cita:\n📅 ${day} de ${MESES[month]} a las ${hour}\n${demoState.pendingService ? '🧾 ' + demoState.pendingService + '\n' : ''}👤 ${demoState.userName}\n📞 ${phoneClean}\n\n¿Es todo correcto? Escribe SÍ para confirmar.`, 'bot');
     });
     return;
   }
@@ -2948,11 +2948,11 @@ function processMessage(text) {
       break;
 
     case 'precio':
-      showBotTyping(() => addPanelMsg('La primera consulta tiene un coste reducido. Tenemos varios bonos y descuentos disponibles. ¿Quieres que te reserve una primera cita para que el equipo te informe sin compromiso?', 'bot'));
+      showBotTyping(() => addPanelMsg(((SECTORES[sectorActual] || {}).precios || 'Te paso los precios enseguida.') + (sectorActual === 'restaurante' ? ' ¿Quieres que te reserve mesa?' : ' ¿Quieres que te busque hueco algún día?'), 'bot'));
       break;
 
     case 'horario':
-      showBotTyping(() => addPanelMsg('Atendemos de lunes a viernes de 9:00 a 20:00, y sábados de 9:00 a 14:00. ¿Quieres que te busque hueco en algún día concreto?', 'bot'));
+      showBotTyping(() => addPanelMsg(((SECTORES[sectorActual] || {}).horario || 'Atendemos de lunes a viernes.') + ' ¿Quieres que te busque hueco en algún día concreto?', 'bot'));
       break;
 
     case 'cancelar':
@@ -2964,6 +2964,12 @@ function processMessage(text) {
       break;
 
     default:
+      if ((demoState.pendingService || intent === 'confirmar') && demoState.step === 'inicio') {
+        demoState.step = 'preguntando-dia';
+        const que = demoState.pendingService ? `Perfecto, te apunto: ${demoState.pendingService}. ` : '¡Genial! ';
+        showBotTyping(() => addPanelMsg(`${que}¿Qué día te viene bien? Elígelo en el calendario de la derecha o dímelo por aquí.`, 'bot'));
+        break;
+      }
       showBotTyping(() => addPanelMsg('Entendido. Para darte la mejor atención, ¿me puedes dar un poco más de detalle? Puedo gestionar tu consulta o conectarte directamente con el equipo.', 'bot'));
   }
 }
@@ -3051,7 +3057,7 @@ const SECTORES = {
   clinica:    { nombre:'Clínica Demo · Agenda', bienvenida:'¡Hola! Soy el asistente de esta clínica. Puedo ayudarte a reservar cita, consultar precios o resolver dudas. ¿En qué te puedo ayudar?', precios:'Valoración inicial 50€. Sesión de fisioterapia 38€. Masajes desde 40€.', horario:'Lunes a viernes de 9:00 a 21:00.', servicios:'Fisioterapia, masajes, punción seca, electroterapia y rehabilitación.', horaInicio:9, horaFin:21, eventos:[['Sesión fisio','green',0,0],['Disponible','yellow',1,1],['Masaje relax','green',2,2],['Rehabilitación','green',3,0],['Disponible','yellow',4,3],['Valoración','green',0,4],['Disponible','yellow',1,2],['Masaje desc.','green',2,1],['Sesión fisio','green',3,3],['Disponible','yellow',4,0]] },
   peluqueria: { nombre:'Peluquería Demo · Agenda', bienvenida:'¡Hola! Soy el asistente de esta peluquería. ¿Quieres reservar turno o consultar algo?', precios:'Corte mujer desde 20€, hombre desde 12€. Tinte desde 35€. Mechas desde 50€.', horario:'Martes a sábado de 9:00 a 20:00. Lunes cerrado.', servicios:'Corte, tinte, mechas, balayage, tratamientos capilares y peinados.', horaInicio:9, horaFin:20, eventos:[['Corte+color','green',0,0],['Mechas','green',1,1],['Disponible','yellow',2,2],['Tinte','green',3,0],['Corte mujer','green',4,3],['Disponible','yellow',0,4],['Balayage','green',1,2],['Corte hombre','green',2,1],['Disponible','yellow',3,3],['Manicura','green',4,0]] },
   restaurante:{ nombre:'Restaurante Demo · Agenda', bienvenida:'¡Bienvenido! Puedo ayudarte a hacer una reserva o informarte del menú. ¿Qué necesitas?', precios:'Menú del día 13€. Carta desde 10€. Menú degustación 45€ por persona.', horario:'Todos los días de 13:00 a 16:00 y de 20:00 a 24:00.', servicios:'Cocina mediterránea, menú del día, carta, eventos privados y catering.', horaInicio:12, horaFin:24, eventos:[['Reserva x4','green',0,0],['Disponible','yellow',1,1],['Reserva x2','green',2,2],['Evento privado','green',3,0],['Disponible','yellow',4,3],['Reserva x6','green',0,4],['Disponible','yellow',1,2],['Reserva x3','green',2,1],['Disponible','yellow',3,3],['Reserva x2','green',4,0],['Reserva x8','green',5,0],['Disponible','yellow',5,3],['Reserva x5','green',5,4],['Reserva x6','green',6,0],['Reserva x4','green',6,1],['Disponible','yellow',6,3]] },
-  lavanderia: { nombre:'Lavandería Demo · Agenda', bienvenida:'¡Hola! Puedo informarte de precios, tiempos de entrega y servicios. ¿En qué te ayudo?', precios:'Lavado y secado desde 5€. Planchado desde 3€. Edredones desde 12€.', horario:'Lunes a sábado de 9:00 a 20:00. Recogida a domicilio lunes a viernes.', servicios:'Lavado, secado, planchado, tintorería, limpieza en seco y recogida a domicilio.', horaInicio:9, horaFin:20, eventos:[['Recogida','green',0,0],['Disponible','yellow',1,1],['Entrega','green',2,2],['Recogida','green',3,0],['Disponible','yellow',4,3],['Entrega','green',0,4],['Recogida','green',1,2],['Disponible','yellow',2,1],['Entrega','green',3,3],['Recogida','green',4,0]] },
+  lavanderia: { nombre:'Lavandería Demo · Agenda', bienvenida:'¡Hola! Puedo informarte de precios, tiempos de entrega y servicios. ¿En qué te ayudo?', precios:'Lavado y secado desde 5€. Planchado desde 3€. Edredones desde 12€. Limpieza en seco y tintorería desde 8€ (trajes regionales y de fallera, según la prenda).', horario:'Lunes a sábado de 9:00 a 20:00. Recogida a domicilio lunes a viernes.', servicios:'Lavado, secado, planchado, tintorería, limpieza en seco y recogida a domicilio.', horaInicio:9, horaFin:20, eventos:[['Recogida','green',0,0],['Disponible','yellow',1,1],['Entrega','green',2,2],['Recogida','green',3,0],['Disponible','yellow',4,3],['Entrega','green',0,4],['Recogida','green',1,2],['Disponible','yellow',2,1],['Entrega','green',3,3],['Recogida','green',4,0]] },
   estetica:   { nombre:'Estética Demo · Agenda', bienvenida:'¡Hola! Soy el asistente de este centro de estética. ¿Quieres reservar cita o consultar tratamientos?', precios:'Manicura desde 15€, pedicura desde 20€. Depilación láser desde 25€. Faciales desde 35€.', horario:'Lunes a sábado de 9:00 a 21:00. Solo con cita previa.', servicios:'Manicura, pedicura, depilación láser, faciales, masajes y diseño de cejas.', horaInicio:9, horaFin:21, eventos:[['Manicura','green',0,0],['Depilación','green',1,1],['Facial','green',2,2],['Disponible','yellow',3,0],['Pedicura','green',4,3],['Masaje','green',0,4],['Disponible','yellow',1,2],['Depilación','green',2,1],['Facial','green',3,3],['Manicura','green',4,0]] },
   dentista:   { nombre:'Clínica Dental Demo · Agenda', bienvenida:'¡Hola! Soy el asistente de esta clínica dental. ¿Necesitas cita o tienes alguna duda?', precios:'Revisión y limpieza desde 50€. Empaste desde 60€. Blanqueamiento desde 200€.', horario:'Lunes a viernes de 9:00 a 21:00. Urgencias disponibles.', servicios:'Revisiones, limpiezas, empastes, blanqueamiento, ortodoncia e implantes.', horaInicio:9, horaFin:21, eventos:[['Revisión','green',0,0],['Limpieza','green',1,1],['Disponible','yellow',2,2],['Empaste','green',3,0],['Disponible','yellow',4,3],['Ortodoncia','green',0,4],['Revisión','green',1,2],['Disponible','yellow',2,1],['Limpieza','green',3,3],['Blanqueo','green',4,0]] },
 };
@@ -3194,8 +3200,59 @@ const _origProcess = processMessage;
 processMessage = function(text) {
   const s = SECTORES[sectorActual];
   const t = text.toLowerCase();
-  if (t.includes('precio')||t.includes('cuánto')||t.includes('cuanto')||t.includes('cuesta')) { showBotTyping(()=>addPanelMsg(s.precios,'bot')); return; }
-  if (t.includes('horario')||(t.includes('hora')&&t.includes('abr'))) { showBotTyping(()=>addPanelMsg(s.horario,'bot')); return; }
+  // Fecha escrita en el chat (p. ej. "2 de octubre", "el 15", "mañana")
+  if (demoState.step === 'preguntando-dia') {
+    let dia = null, mes = null;
+    const hoy = new Date();
+    if (/pasado ma[ñn]ana/.test(t)) { const d = new Date(hoy); d.setDate(d.getDate() + 2); dia = d.getDate(); mes = d.getMonth(); }
+    else if (/ma[ñn]ana/.test(t)) { const d = new Date(hoy); d.setDate(d.getDate() + 1); dia = d.getDate(); mes = d.getMonth(); }
+    else if (/\bhoy\b/.test(t)) { dia = hoy.getDate(); mes = hoy.getMonth(); }
+    else {
+      const m = t.match(/\b(\d{1,2})\b(?:\s*de\s*(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre))?/);
+      if (m) {
+        dia = parseInt(m[1], 10);
+        if (m[2]) mes = MESES.map(x => x.toLowerCase()).indexOf(m[2] === 'setiembre' ? 'septiembre' : m[2]);
+      }
+    }
+    if (dia && dia >= 1 && dia <= 31) {
+      if (mes !== null && mes >= 0 && mes !== calMonth) { if (mes < calMonth) calYear++; calMonth = mes; }
+      const ultimo = new Date(calYear, calMonth + 1, 0).getDate();
+      if (dia <= ultimo) {
+        const eco = addPanelMsg;
+        addPanelMsg = (txt, tipo) => { if (tipo !== 'user') eco(txt, tipo); };
+        try { onDayClick(dia); } finally { addPanelMsg = eco; }
+        return;
+      }
+    }
+  }
+  // Hora escrita en el chat (p. ej. "10:00", "a las 5 de la tarde", "17h")
+  if (demoState.step === 'preguntando-hora') {
+    const m = t.match(/\b(\d{1,2})(?:[:.h](\d{2}))?\s*(?:h|horas)?\s*(de la tarde|de la noche|pm)?/);
+    if (m) {
+      let h = parseInt(m[1], 10); const min = m[2] || '00';
+      if (m[3] && h < 12) h += 12;
+      const libres = [...document.querySelectorAll('#slots-row .slot-btn')].filter(b => !b.disabled).map(b => b.textContent.replace(/[^0-9:]/g, ''));
+      let hora = String(h).padStart(2, '0') + ':' + min;
+      if (!libres.includes(hora) && h < 12 && libres.includes(String(h + 12).padStart(2, '0') + ':' + min)) hora = String(h + 12).padStart(2, '0') + ':' + min;
+      if (libres.includes(hora)) {
+        const dia = demoState.pendingDay;
+        setTimeout(() => {
+          const eco = addPanelMsg;
+          addPanelMsg = (txt, tipo) => { if (tipo !== 'user') eco(txt, tipo); };
+          try { onSlotClick(hora, dia); } finally { addPanelMsg = eco; }
+          const btn = [...document.querySelectorAll('#slots-row .slot-btn')].find(b => b.textContent.replace(/[^0-9:]/g, '') === hora);
+          if (btn) { btn.style.borderColor = 'var(--violet)'; btn.style.color = 'var(--violet)'; btn.style.background = 'rgba(139,92,246,0.15)'; }
+        }, 0);
+        return;
+      }
+      if (libres.length) { showBotTyping(() => addPanelMsg(`Esa hora no la tengo libre. Puedo darte: ${libres.join(', ')}. ¿Cuál prefieres?`, 'bot')); return; }
+    }
+  }
+  const enDatos = ['preguntando-nombre','preguntando-telefono'].includes(demoState.step);
+  if (!enDatos) { const serv = detectarServicio(text); if (serv) demoState.pendingService = serv; }
+  const sigue = sectorActual === 'restaurante' ? ' ¿Quieres que te reserve mesa?' : ' ¿Quieres que te busque hueco algún día?';
+  if (t.includes('precio')||t.includes('cuánto')||t.includes('cuanto')||t.includes('cuesta')) { showBotTyping(()=>addPanelMsg(s.precios + (enDatos ? '' : sigue),'bot')); return; }
+  if (t.includes('horario')||(t.includes('hora')&&t.includes('abr'))) { showBotTyping(()=>addPanelMsg(s.horario + (enDatos ? '' : ' ¿Quieres que te busque hueco en algún día concreto?'),'bot')); return; }
   if (t.includes('servicio')||t.includes('ofrecéis')||t.includes('ofreceis')) { showBotTyping(()=>addPanelMsg(s.servicios,'bot')); return; }
   _origProcess(text);
 };
