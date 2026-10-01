@@ -2751,7 +2751,7 @@ function confirmBooking() {
   const name = demoState.userName;
   const phone = demoState.userPhone;
   const servicioData = DEMO_SERVICIOS[sectorActual] || DEMO_SERVICIOS.clinica;
-  const trat = demoState.pendingService || servicioData.items[Math.floor(Math.random() * servicioData.items.length)];
+  const trat = demoState.pendingService || 'Por concretar';
   const tratLabel = servicioData.label;
   const key = getKey(calYear, month, day);
 
@@ -2811,7 +2811,7 @@ function getIntent(text) {
   if (/precio|cuánto|cuesta|coste|tarifa/.test(t)) return 'precio';
   if (/horario|hora|cuándo|cuando|abierto|abren/.test(t)) return 'horario';
   if (/cancelar|anular|quitar|borrar/.test(t)) return 'cancelar';
-  if (/dolor|duele|mal|lesión|lesion|espalda|cervical|lumbar|hombro|rodilla|cuello|pierna/.test(t)) return 'sintoma';
+  if ((sectorActual === 'clinica' || sectorActual === 'dentista') && /dolor|duele|mal|lesión|lesion|espalda|cervical|lumbar|hombro|rodilla|cuello|pierna/.test(t)) return 'sintoma';
   if (/mech|tint|corte|balayage|peinado|manicura|pedicura|depilaci|facial|blanquea|empaste|ortodoncia|implante|lavado|planchado|recogida|masaje|fisio|rehabilit|punción|valoraci/.test(t)) return 'servicio';
   if (/sí|si|ok|vale|perfecto|correcto|confirm|exacto/.test(t)) return 'confirmar';
   if (/no|cancel|incorrecto/.test(t)) return 'negar';
@@ -2819,9 +2819,63 @@ function getIntent(text) {
   return 'default';
 }
 
+// Detecta el servicio que pide el cliente según el sector (para no apuntar uno al azar)
+const DEMO_SERVICIO_REGLAS = {
+  lavanderia: [
+    [/(traje|vestido|abrigo|chaqueta|americana|chaquet[oó]n|gabardina|blusa|camisa de seda|corbata|fular|pa[ñn]uelo)(\s+de\s+[a-záéíóúñ]+)?/i, m => 'Limpieza en seco · ' + m[0].toLowerCase()],
+    [/fallera|fallero|indumentaria|tintorer|en seco|seda|cuero|\bante\b/i, () => 'Limpieza en seco'],
+    [/n[oó]rdico|edred[oó]n|manta|colcha|funda n[oó]rdica/i, () => 'Edredón'],
+    [/plancha/i, () => 'Planchado'],
+    [/recog|a domicilio|pas[aá]is a buscar/i, () => 'Recogida a domicilio'],
+    [/lavar|lavado|colada|ropa|secado|secar/i, () => 'Lavado y secado']
+  ],
+  peluqueria: [
+    [/balayage/i, () => 'Balayage'], [/mecha/i, () => 'Mechas'], [/tint|color|canas/i, () => 'Tinte'],
+    [/manicura|u[ñn]as/i, () => 'Manicura'], [/peinado|recogido|boda|evento/i, () => 'Peinado especial'],
+    [/corte|cortar|pelo|flequillo/i, () => 'Corte y secado']
+  ],
+  restaurante: [
+    [/evento|celebraci|cumplea|comuni[oó]n|cena de empresa/i, () => 'Evento privado'],
+    [/(?:somos|mesa para|para)\s+(\d+|dos|tres|cuatro|cinco|seis|siete|ocho)|(\d+|dos|tres|cuatro|cinco|seis|siete|ocho)\s+(?:personas|comensales|adultos)/i, m => {
+      const w = {dos:2,tres:3,cuatro:4,cinco:5,seis:6,siete:7,ocho:8};
+      const v = (m[1] || m[2]).toLowerCase(); const n = w[v] || parseInt(v, 10);
+      return n ? 'Mesa para ' + n : null;
+    }]
+  ],
+  clinica: [
+    [/masaje/i, () => 'Masaje relajante'], [/punci[oó]n/i, () => 'Punción seca'],
+    [/rehabilit|operaci|recuperaci/i, () => 'Rehabilitación'],
+    [/fisio|sesi[oó]n|contractura/i, () => 'Sesión fisioterapia']
+  ],
+  estetica: [
+    [/pedicura|pies/i, () => 'Pedicura'], [/manicura|u[ñn]as/i, () => 'Manicura'],
+    [/depila|l[aá]ser/i, () => 'Depilación láser'], [/facial|cara|limpieza/i, () => 'Facial hidratante'],
+    [/ceja/i, () => 'Diseño de cejas']
+  ],
+  dentista: [
+    [/blanquea/i, () => 'Blanqueamiento'], [/empaste|caries/i, () => 'Empaste'],
+    [/ortodon|bracket|aparato|invisalign/i, () => 'Ortodoncia'], [/implante/i, () => 'Implante'],
+    [/limpieza|revisi/i, () => 'Revisión y limpieza']
+  ]
+};
+
+function detectarServicio(text) {
+  const reglas = DEMO_SERVICIO_REGLAS[sectorActual] || [];
+  for (const [re, fn] of reglas) {
+    const m = text.match(re);
+    const r = m ? fn(m) : null;
+    if (r) return r;
+  }
+  return null;
+}
+
 function processMessage(text) {
   const intent = getIntent(text);
   const trimmed = text.trim();
+  if (!['preguntando-nombre','preguntando-telefono'].includes(demoState.step)) {
+    const serv = detectarServicio(text);
+    if (serv) demoState.pendingService = serv;
+  }
 
   // ── PASO: esperando nombre ──
   if (demoState.step === 'preguntando-nombre') {
