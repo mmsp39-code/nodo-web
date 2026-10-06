@@ -1,6 +1,6 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Lora:ital@1&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--ink:#16133D;--vio:#6B3FE4;--cy:#0E9FBF;--lav:#F1EDFD;--txt:#4A4866;--line:#DCD6F5;--red:#D9475B;--grn:#13A37A}
@@ -84,13 +84,16 @@ return `<div class="mx"><div class="ax y">Más impacto en tu día a día ↑</di
 if(t=="tabla")return `<div class="tb">${d.map(x=>`<div class="tr"><div>${e(x[0])}</div><div>${e(x[1])}</div><div>${e(x[2])}</div></div>`).join("")}</div></div>`;
 if(t=="checklist")return `<div class="ck">${d.preguntas.map(x=>`<div class="ci"><div class="box">✓</div><p>${e(x)}</p></div>`).join("")}</div></div><div class="verdict">${d.veredicto}</div>`;}
 function card(p){return `<div class="card"><div class="side"></div><div class="wrap">${head(p)}${body(p)}<div class="foot"><span>Guárdalo si te sirve</span><b>nodobots.com</b></div></div>`}
+async function fontCSS(){let css=await (await fetch("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Lora:ital@1&display=swap")).text();
+ let out="";for(const blk of css.split("/* ").filter(x=>x.startsWith("latin */"))){const body=blk.slice(blk.indexOf("@font-face"));const m=body.match(/url\((https:[^)]+)\)/);const u=new Uint8Array(await (await fetch(m[1])).arrayBuffer());let s="";for(let i=0;i<u.length;i++)s+=String.fromCharCode(u[i]);out+=body.replace(m[1],"data:font/woff2;base64,"+btoa(s))+"\n";}return out}
 async function run(){await document.fonts.ready;
  for(const f of ["400 20px Poppins","500 20px Poppins","700 20px Poppins","italic 400 20px Lora"])await document.fonts.load(f);
+ const fc=await fontCSS();
  const q=new URLSearchParams(location.search),only=q.get("d");const res=[];
  for(const p of POSTS){if(only&&p.id!==only)continue;
   const o=document.getElementById("out");o.innerHTML=card(p);
-  const cv=await html2canvas(o.firstChild,{scale:1,width:1080,height:1350,backgroundColor:"#ffffff",useCORS:true});
-  res.push({name:p.id+".png",url:cv.toDataURL("image/png")});}
+  const url=await htmlToImage.toPng(o.firstChild,{width:1080,height:1350,pixelRatio:1,backgroundColor:"#ffffff",fontEmbedCSS:fc});
+  res.push({name:p.id+".png",url});}
  window.RESULT=res;document.title="LISTO "+res.length;
  if(window.opener){window.opener.postMessage({tipo:"nodobots-png",files:res},"*");}
 }
