@@ -1,0 +1,10 @@
+Registro de posts de LinkedIn personal (no repetir temas)
+fecha | diseño | tema
+2026-10-06 | proceso | Cómo funciona por dentro un asistente de citas por WhatsApp
+2026-10-08 | errores | 5 errores al poner un chatbot en tu negocio
+2026-10-13 | mitos | Mitos sobre la IA en pequeños negocios
+2026-10-15 | matriz | Qué tareas automatizar primero: impacto vs esfuerzo
+2026-10-20 | proceso | El camino de un cliente desde Google hasta tu agenda
+2026-10-22 | tabla | ChatGPT frente a un asistente hecho para tu negocio
+2026-10-27 | checklist | 6 preguntas para saber si tu negocio necesita un asistente
+2026-10-29 | proceso | Antes de automatizar, ordena el proceso

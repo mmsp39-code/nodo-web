@@ -1,0 +1,98 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Lora:ital@1&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#16133D;--vio:#6B3FE4;--cy:#0E9FBF;--lav:#F1EDFD;--txt:#4A4866;--line:#DCD6F5;--red:#D9475B;--grn:#13A37A}
+body{margin:0;background:#ddd}.card{width:1080px;height:1350px;background:#fff;font-family:Poppins,sans-serif;color:var(--ink);position:relative;overflow:hidden}
+.side{position:absolute;left:0;top:0;bottom:0;width:18px;background:var(--vio)}
+.wrap{padding:70px 80px 0 96px}
+.who{display:flex;align-items:center;gap:14px;font-size:22px;font-weight:500;color:var(--txt)}
+.dot{width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700;font-size:18px}
+h1{font-size:60px;line-height:1.08;font-weight:700;letter-spacing:-1.5px;margin-top:38px;max-width:900px}
+.lead{font-family:Lora,serif;font-style:italic;font-size:29px;line-height:1.4;color:var(--txt);margin-top:22px;max-width:840px}
+.foot{position:absolute;left:96px;right:80px;bottom:44px;display:flex;justify-content:space-between;font-size:19px;color:var(--txt)}
+.foot b{color:var(--vio);font-weight:700}
+.flow{margin-top:38px;position:relative}
+.flow:before{content:"";position:absolute;left:180px;top:22px;bottom:30px;width:4px;background:var(--line)}
+.st{display:grid;grid-template-columns:150px 64px 1fr;align-items:start;margin-bottom:18px}
+.t{font-size:19px;font-weight:500;color:var(--cy);text-align:right;padding-top:12px;padding-right:18px;white-space:nowrap}
+.n{width:48px;height:48px;border-radius:50%;background:var(--vio);color:#fff;font-weight:700;font-size:22px;display:grid;place-items:center;position:relative;z-index:1;margin-left:4px;box-shadow:0 0 0 7px #fff}
+.st h3{font-size:29px;font-weight:700;line-height:1.2;padding-top:5px}
+.st p{font-size:21px;color:var(--txt);line-height:1.4;margin-top:4px;max-width:640px}
+.cmp{position:absolute;left:96px;right:80px;bottom:100px;display:grid;grid-template-columns:1fr 1fr;border-radius:20px;overflow:hidden}
+.cmp>div{padding:26px 30px}
+.a{background:#F4F4F7}.b{background:var(--ink);color:#fff}
+.cmp h4{font-size:22px;font-weight:700;margin-bottom:8px}
+.a h4{color:var(--txt)}.b h4{color:#7FE3F5}
+.cmp li{list-style:none;font-size:20px;line-height:1.55}
+.a li{color:var(--txt)}
+.errs{margin-top:40px}
+.er{display:grid;grid-template-columns:86px 1fr;gap:6px;padding:20px 0;border-top:2px solid var(--line)}
+.er:last-child{border-bottom:2px solid var(--line)}
+.er .k{font-size:54px;font-weight:700;color:var(--vio);line-height:1}
+.er h3{font-size:28px;font-weight:700;line-height:1.2}
+.er p{font-size:21px;color:var(--txt);margin-top:6px;line-height:1.4}
+.er p span{color:var(--grn);font-weight:500}
+.myths{margin-top:40px;display:flex;flex-direction:column;gap:18px}
+.my{display:grid;grid-template-columns:1fr 1fr;border-radius:18px;overflow:hidden}
+.my>div{padding:22px 26px}
+.my .m{background:#F4F4F7}.my .r{background:var(--lav)}
+.my small{display:block;font-size:17px;font-weight:700;margin-bottom:6px}
+.my .m small{color:var(--red)}.my .r small{color:var(--vio)}
+.my .m p{font-size:22px;color:var(--txt);line-height:1.35;text-decoration:line-through;text-decoration-color:rgba(217,71,91,.5)}
+.my .r p{font-size:22px;line-height:1.35;font-weight:500}
+.mx{margin-top:44px;position:relative;padding:0 0 46px 46px}
+.grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:300px 300px;gap:14px}
+.q{border-radius:18px;padding:24px 26px;background:#F4F4F7}
+.q.best{background:var(--ink);color:#fff}
+.q.mid{background:var(--lav)}
+.q h4{font-size:25px;font-weight:700}
+.q.best h4{color:#7FE3F5}
+.q em{font-style:normal;display:block;font-size:17px;color:var(--txt);margin:2px 0 12px}
+.q.best em{color:#B9B5E0}
+.q li{list-style:none;font-size:20px;line-height:1.5}
+.ax{position:absolute;font-size:18px;font-weight:500;color:var(--cy)}
+.ax.y{left:-6px;top:300px;transform:rotate(-90deg);transform-origin:left top;white-space:nowrap}
+.ax.x{left:46px;bottom:4px}
+.tb{margin-top:44px;border-radius:20px;overflow:hidden;border:2px solid var(--line)}
+.tr{display:grid;grid-template-columns:230px 1fr 1fr}
+.tr>div{padding:18px 22px;font-size:20px;line-height:1.35;border-top:2px solid var(--line)}
+.tr:first-child>div{border-top:none;font-weight:700;font-size:22px}
+.tr>div:first-child{font-weight:700;color:var(--ink)}
+.tr>div:nth-child(2){color:var(--txt);background:#FAFAFC}
+.tr>div:nth-child(3){background:var(--lav)}
+.tr:first-child>div:nth-child(3){background:var(--vio);color:#fff}
+.ck{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ci{background:#F4F4F7;border-radius:18px;padding:22px 24px;display:grid;grid-template-columns:44px 1fr;gap:12px}
+.box{width:36px;height:36px;border-radius:10px;border:3px solid var(--vio);display:grid;place-items:center;color:var(--vio);font-weight:700;font-size:22px}
+.ci p{font-size:22px;line-height:1.35;font-weight:500}
+.verdict{position:absolute;left:96px;right:80px;bottom:100px;background:var(--ink);color:#fff;border-radius:20px;padding:28px 32px;font-size:24px;line-height:1.4}
+.verdict b{color:#7FE3F5}
+</style></head><body><div id="out"></div><script>
+const POSTS=[{"id":"2026-10-06","fecha":"2026-10-06","tema":"Cómo funciona por dentro un asistente de citas por WhatsApp","tipo":"proceso","titulo":"Así funciona por dentro un asistente de citas por WhatsApp","entradilla":"Lo que pasa en unos segundos entre que tu cliente escribe y la cita aparece en tu agenda.","datos":{"pasos":[["Segundo 0","El cliente escribe como quiere","\"¿Tenéis hueco el jueves por la tarde?\" Sin menús ni botones."],["Al instante","La IA entiende qué pide","Detecta servicio, día y franja aunque lo diga con sus palabras."],["Al instante","Mira tu agenda real","Consulta tu calendario y solo ofrece huecos libres de verdad."],["Al confirmar","Reserva y te avisa","Guarda la cita con nombre y teléfono, y te llega un aviso."],["El día antes","Recordatorio automático","Menos olvidos y huecos vacíos, sin que nadie llame."]],"comparacion":[["Sin asistente",["Llamadas sin coger","Mensajes que esperan horas","Citas olvidadas"]],["Con asistente",["Respuesta a cualquier hora","Agenda siempre al día","Tu equipo, en lo suyo"]]]}},{"id":"2026-10-08","fecha":"2026-10-08","tema":"5 errores al poner un chatbot en tu negocio","tipo":"errores","titulo":"5 errores al poner un chatbot en tu negocio","entradilla":"Casi nunca falla la tecnología. Falla cómo se plantea.","datos":[["Querer que lo haga todo desde el primer día","Un bot que intenta cubrirlo todo acaba haciéndolo todo regular.","Empieza por una tarea: citas o preguntas frecuentes."],["No darle información real del negocio","Sin horarios, precios y normas claras, se inventa o se queda corto.","Escríbele lo que respondería tu mejor empleado."],["Esconder que es un asistente","La gente lo nota y desconfía.","Dilo claro y ofrece hablar con una persona."],["No revisar lo que responde","Las primeras semanas salen dudas que no habías previsto.","Lee las conversaciones y ajusta."],["Dejarlo solo en la web","El cliente escribe donde ya está.","Ponlo donde te escriben: WhatsApp, redes, web."]]},{"id":"2026-10-13","fecha":"2026-10-13","tema":"Mitos sobre la IA en pequeños negocios","tipo":"mitos","titulo":"IA en tu negocio: 4 mitos y lo que pasa de verdad","entradilla":"Lo que frena a muchos negocios pequeños no es el precio. Son estas ideas.","datos":[["Esto es para empresas grandes.","Un negocio pequeño es donde más se nota: cada llamada perdida es un cliente."],["La IA va a sustituir a mi equipo.","Quita lo repetitivo para que tu equipo atienda mejor lo importante."],["Hay que saber de tecnología.","Tú explicas cómo trabajas. La parte técnica la monta quien sabe."],["Los clientes prefieren hablar con una persona.","Prefieren que les respondan rápido. Y siempre pueden pedir una persona."]]},{"id":"2026-10-15","fecha":"2026-10-15","tema":"Qué tareas automatizar primero: impacto vs esfuerzo","tipo":"matriz","titulo":"¿Qué automatizo primero? El mapa para decidir","entradilla":"No empieces por lo más vistoso. Empieza por lo que más tiempo te come y menos cuesta montar.","datos":{"ai":["Empieza por aquí","Mucho impacto, poco esfuerzo",["Preguntas que repites cada día","Recordatorios de citas","Avisos de nuevos contactos"]],"ae":["Planifícalo","Mucho impacto, más trabajo",["Reservas conectadas a tu agenda","Presupuestos automáticos"]],"bi":["Si sobra tiempo","Poco impacto, poco esfuerzo",["Mensajes de bienvenida","Respuestas fuera de horario"]],"be":["Déjalo para más tarde","Poco impacto, mucho esfuerzo",["Integraciones complejas que casi no usarás"]]}},{"id":"2026-10-20","fecha":"2026-10-20","tema":"El camino de un cliente desde Google hasta tu agenda","tipo":"proceso","titulo":"De Google a tu agenda: el camino de un cliente","entradilla":"En cada paso se pierde gente. La clave es no perderla donde ya estaba interesada.","datos":{"pasos":[["Te encuentra","Busca en Google o redes","Ve tu ficha, tu web o una publicación tuya."],["Le interesa","Entra a mirar","Horarios, servicios, opiniones. Decide en segundos."],["Pregunta","Te escribe","Aquí se pierde más gente: si nadie responde, se va."],["Te deja datos","Nombre y teléfono","Ya tienes un contacto real, no una visita anónima."],["Cierra","Cita o compra","Tú llamas con contexto o la reserva se hace sola."]],"comparacion":[["Donde se pierde",["Nadie responde","Responden tarde","No pide datos"]],["Cómo evitarlo",["Respuesta al momento","Pedir contacto con naturalidad","Aviso al dueño"]]]}},{"id":"2026-10-22","fecha":"2026-10-22","tema":"ChatGPT frente a un asistente hecho para tu negocio","tipo":"tabla","titulo":"ChatGPT o un asistente hecho para tu negocio","entradilla":"Usan la misma tecnología, pero no sirven para lo mismo.","datos":[["","ChatGPT tal cual","Asistente para tu negocio"],["Qué sabe","Cultura general","Tus horarios, precios y normas"],["Dónde está","En una web aparte","Donde te escriben tus clientes"],["Tu agenda","No la ve","Consulta y reserva huecos"],["Si no sabe algo","Puede inventarse una respuesta","Dice que no lo sabe y te avisa"],["Quién lo usa","Tú","Tus clientes, a cualquier hora"],["Te avisa","No","Cuando entra un cliente nuevo"]]},{"id":"2026-10-27","fecha":"2026-10-27","tema":"6 preguntas para saber si tu negocio necesita un asistente","tipo":"checklist","titulo":"¿Le sacarías partido a un asistente automático?","entradilla":"Seis preguntas rápidas. Si respondes sí a tres o más, merece la pena mirarlo.","datos":{"preguntas":["¿Te llaman mientras estás atendiendo y no puedes coger?","¿Respondes las mismas preguntas varias veces al día?","¿Te llegan mensajes fuera de horario?","¿Das citas por teléfono o WhatsApp a mano?","¿Hay clientes que olvidan su cita?","¿Pierdes tiempo pasando datos de un sitio a otro?"],"veredicto":"<b>3 o más síes:</b> hay horas a la semana que se pueden recuperar. Empieza por la pregunta que más te ha dolido."}},{"id":"2026-10-29","fecha":"2026-10-29","tema":"Antes de automatizar, ordena el proceso","tipo":"proceso","titulo":"Antes de automatizar, ordena: 4 pasos","entradilla":"Automatizar un proceso desordenado solo hace el desorden más rápido.","datos":{"pasos":[["Paso 1","Apunta qué haces","Una semana anotando tareas repetidas y cuánto tiempo te llevan."],["Paso 2","Escribe cómo lo haces","Los pasos, en orden, como se lo explicarías a alguien nuevo."],["Paso 3","Quita lo que sobra","Pasos duplicados, datos que copias dos veces, esperas."],["Paso 4","Ahora, automatiza","Con el proceso claro, montarlo es más rápido y falla menos."]],"comparacion":[["Si te lo saltas",["El sistema copia tus fallos","Más tiempo en arreglos","Sensación de que no funciona"]],["Si lo haces",["Sabes qué medir","Montaje más rápido","Resultados desde el principio"]]]}}];
+const e=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const ul=l=>l.map(i=>"<li>"+e(i)+"</li>").join("");
+function head(p){return `<div class="who"><div class="dot">MS</div>Marcos Signes, automatización para negocios locales</div><h1>${e(p.titulo)}</h1><p class="lead">${e(p.entradilla)}</p>`}
+function body(p){const t=p.tipo,d=p.datos;
+if(t=="proceso"){const s=d.pasos.map((x,i)=>`<div class="st"><div class="t">${e(x[0])}</div><div class="n">${i+1}</div><div><h3>${e(x[1])}</h3><p>${e(x[2])}</p></div></div>`).join("");const c=d.comparacion;
+return `<div class="flow">${s}</div></div><div class="cmp"><div class="a"><h4>${e(c[0][0])}</h4><ul>${ul(c[0][1])}</ul></div><div class="b"><h4>${e(c[1][0])}</h4><ul>${ul(c[1][1])}</ul></div></div>`}
+if(t=="errores")return `<div class="errs">${d.map((x,i)=>`<div class="er"><div class="k">${i+1}</div><div><h3>${e(x[0])}</h3><p>${e(x[1])} <span>${e(x[2])}</span></p></div></div>`).join("")}</div></div>`;
+if(t=="mitos")return `<div class="myths">${d.map(x=>`<div class="my"><div class="m"><small>Lo que se dice</small><p>${e(x[0])}</p></div><div class="r"><small>Lo que pasa de verdad</small><p>${e(x[1])}</p></div></div>`).join("")}</div></div>`;
+if(t=="matriz"){const q=(c,k)=>{const x=d[k];return `<div class="q ${c}"><h4>${e(x[0])}</h4><em>${e(x[1])}</em><ul>${ul(x[2])}</ul></div>`};
+return `<div class="mx"><div class="ax y">Más impacto en tu día a día ↑</div><div class="grid">${q("best","ai")}${q("mid","ae")}${q("","bi")}${q("","be")}</div><div class="ax x">Más esfuerzo para montarlo →</div></div></div>`}
+if(t=="tabla")return `<div class="tb">${d.map(x=>`<div class="tr"><div>${e(x[0])}</div><div>${e(x[1])}</div><div>${e(x[2])}</div></div>`).join("")}</div></div>`;
+if(t=="checklist")return `<div class="ck">${d.preguntas.map(x=>`<div class="ci"><div class="box">✓</div><p>${e(x)}</p></div>`).join("")}</div></div><div class="verdict">${d.veredicto}</div>`;}
+function card(p){return `<div class="card"><div class="side"></div><div class="wrap">${head(p)}${body(p)}<div class="foot"><span>Guárdalo si te sirve</span><b>nodobots.com</b></div></div>`}
+async function run(){await document.fonts.ready;
+ for(const f of ["400 20px Poppins","500 20px Poppins","700 20px Poppins","italic 400 20px Lora"])await document.fonts.load(f);
+ const q=new URLSearchParams(location.search),only=q.get("d");const res=[];
+ for(const p of POSTS){if(only&&p.id!==only)continue;
+  const o=document.getElementById("out");o.innerHTML=card(p);
+  const cv=await html2canvas(o.firstChild,{scale:1,width:1080,height:1350,backgroundColor:"#ffffff",useCORS:true});
+  res.push({name:p.id+".png",url:cv.toDataURL("image/png")});}
+ window.RESULT=res;document.title="LISTO "+res.length;
+ if(window.opener){window.opener.postMessage({tipo:"nodobots-png",files:res},"*");}
+}
+run();
+</script></body></html>
