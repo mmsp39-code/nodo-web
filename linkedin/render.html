@@ -95,8 +95,8 @@ async function run(){await document.fonts.ready;
  const q=new URLSearchParams(location.search),only=q.get("d");const res=[];
  for(const p of POSTS){if(only&&p.id!==only)continue;
   const o=document.getElementById("out");o.innerHTML=card(p);
-  const url=await htmlToImage.toPng(o.firstChild,{width:1080,height:1350,pixelRatio:1,backgroundColor:"#ffffff",fontEmbedCSS:fc});
-  res.push({name:p.id+".png",url});}
+  const jpg=q.get("fmt")==="jpg";const opts={width:1080,height:1350,pixelRatio:1,backgroundColor:"#ffffff",fontEmbedCSS:fc};const url=jpg?await htmlToImage.toJpeg(o.firstChild,{...opts,quality:0.93}):await htmlToImage.toPng(o.firstChild,opts);
+  res.push({name:p.id+(jpg?".jpg":".png"),url});}
  window.RESULT=res;document.title="LISTO "+res.length;
  if(window.opener){window.opener.postMessage({tipo:"nodobots-png",files:res},"*");}
 }
