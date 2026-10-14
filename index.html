@@ -3433,6 +3433,8 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+var _h={'#aviso-legal':'modal-legal','#privacidad':'modal-privacidad','#cookies':'modal-cookies'}[location.hash];
+if(_h&&document.getElementById(_h)) openModal(_h);
 </script>
 
 <script src="/nodo-chat.js" defer></script>
