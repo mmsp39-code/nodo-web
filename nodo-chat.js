@@ -1,10 +1,10 @@
 /* NodoBots · Asistente IA flotante
    Se carga con: <script src="/nodo-chat.js" defer></script>
-   El "cerebro" está en Make (escenario "NodoBots - Asistente web"). */
+   El "cerebro" está en n8n (flujo "NodoBots - Asistente web"). */
 (function () {
   if (window.__nodoChat) return; window.__nodoChat = true;
 
-  var WEBHOOK = 'https://hook.eu2.make.com/fftlsklfxwg3huwoqb26vhgi113mwdfj';
+  var WEBHOOK = 'https://n8n.nodobots.com/webhook/asistente-web-prueba';
   var WHATSAPP = 'https://wa.me/34620502131?text=Hola%2C%20vengo%20de%20la%20web%20de%20NodoBots';
   var LOGO = '/img/nodobots-asistente.png';
   var SALUDO = '¡Hola! 👋 Soy el asistente de IA de NodoBots. ¿Te puedo ayudar en algo?';
