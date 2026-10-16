@@ -4,7 +4,7 @@
 (function () {
   if (window.__nodoChat) return; window.__nodoChat = true;
 
-  var WEBHOOK = 'https://n8n.nodobots.com/webhook/asistente-web-prueba';
+  var WEBHOOK = 'https://n8n.nodobots.com/webhook/asistente-web';
   var WHATSAPP = 'https://wa.me/34620502131?text=Hola%2C%20vengo%20de%20la%20web%20de%20NodoBots';
   var LOGO = '/img/nodobots-asistente.png';
   var SALUDO = '¡Hola! 👋 Soy el asistente de IA de NodoBots. ¿Te puedo ayudar en algo?';
