@@ -3019,8 +3019,8 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     mode: 'no-cors'
   });
 
-  // Aviso a Telegram + hoja de clientes (asistente NodoBots en Make)
-  fetch('https://hook.eu2.make.com/fftlsklfxwg3huwoqb26vhgi113mwdfj', {
+  // Aviso a Telegram + hoja de clientes (asistente NodoBots en n8n)
+  fetch('https://n8n.nodobots.com/webhook/asistente-web-prueba', {
     method: 'POST',
     body: new URLSearchParams({
       conversacion: '',
@@ -3328,7 +3328,7 @@ window.addEventListener('scroll', () => {
   <p>Conservamos tus datos hasta 12 meses desde tu último contacto si no llega a haber relación comercial, o mientras dure ésta. Puedes pedir que los borremos antes.</p>
 
   <h3>Destinatarios</h3>
-  <p>No vendemos ni cedemos tus datos a terceros, salvo obligación legal. Para prestar el servicio usamos proveedores que los tratan por nuestra cuenta: Google (formulario y hoja de contactos), Make (automatización), OpenAI (que genera las respuestas del asistente virtual) y Telegram (avisos internos). Algunos de estos proveedores están en Estados Unidos y operan con las garantías previstas por el RGPD para transferencias internacionales.</p>
+  <p>No vendemos ni cedemos tus datos a terceros, salvo obligación legal. Para prestar el servicio usamos proveedores que los tratan por nuestra cuenta: Google (formulario y hoja de contactos), OVHcloud (el servidor, en el Reino Unido, donde funciona nuestra automatización con n8n), OpenAI (que genera las respuestas del asistente virtual) y Telegram (avisos internos). Algunos de estos proveedores están en Estados Unidos y operan con las garantías previstas por el RGPD para transferencias internacionales.</p>
 
   <h3>Tus derechos</h3>
   <p>Tienes derecho a acceder, rectificar, suprimir, oponerte y solicitar la portabilidad de tus datos. Puedes ejercerlos escribiendo a hola@nodobots.com. También puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
