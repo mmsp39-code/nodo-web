@@ -1,0 +1,7 @@
+{
+  "fecha": "2026-11-10",
+  "tema": "Taller: avisar al cliente de que su coche está listo, sin llamar",
+  "texto": "En un taller hay una llamada que se repite una y otra vez: «¿está ya mi coche?». Y otra, la tuya: «ya puede pasar a recogerlo».\n\nUn ejemplo de cómo podría evitarse: terminas la reparación y marcas el coche como «listo» en una hoja de cálculo. Una automatización detecta ese cambio y le manda al cliente un aviso con su matrícula y cómo pasar a recogerlo. Si no aparece en unos días, puede mandarle un recordatorio.\n\nTú sigues con el siguiente coche. El aviso sale solo.\n\nNo es magia: es una tarea repetitiva bien ordenada. Te la dejo en la imagen, paso a paso.\n\nSi tienes un taller y quieres ver cómo se plantearía el tuyo: https://nodobots.com 🔧\n\n#Talleres #Automatización #PYMES #RiberaAlta #Alzira",
+  "imagen": "https://nodobots.com/linkedin/2026-11-10.png",
+  "aviso": false
+}
