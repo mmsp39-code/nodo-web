@@ -143,8 +143,111 @@
     @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 640px) { .nav-links, .nav-actions { display: none; } .hamburger { display: flex; } .articles-grid { grid-template-columns: 1fr; } .footer-top { grid-template-columns: 1fr; gap: 2rem; } }
   </style>
+<style>.skip-link{position:absolute;left:-9999px;top:8px;z-index:100000;background:#fff;color:#000;padding:10px 16px;border-radius:8px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none}.skip-link:focus{left:12px;outline:3px solid #38bdf8;outline-offset:2px}main#contenido:focus{outline:none}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog de IA · NodoBots",
+  "url": "https://nodobots.com/blog.html",
+  "inLanguage": "es",
+  "description": "Guías y artículos prácticos sobre cómo la inteligencia artificial y la automatización por WhatsApp ayudan al comercio local en Alzira, la Ribera y Valencia.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "NodoBots",
+    "url": "https://nodobots.com/"
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Bot de WhatsApp para lavanderías y tintorerías: que el móvil no te pare la máquina",
+      "description": "Precios, plazos, recogidas a domicilio y el aviso de \"ya está lista\": cómo un bot responde lo de siempre mientras tú atiendes el mostrador.",
+      "url": "https://nodobots.com/bot-whatsapp-lavanderia.html",
+      "inLanguage": "es",
+      "author": {
+        "@type": "Organization",
+        "name": "NodoBots"
+      },
+      "datePublished": "2026-10"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Contestador automático de WhatsApp: qué hace la versión gratis (y qué no)",
+      "description": "El \"mensaje de ausencia\" gratis de WhatsApp Business manda siempre el mismo texto. Te explicamos sus límites reales y cuándo hace falta algo más.",
+      "url": "https://nodobots.com/contestador-automatico-whatsapp.html",
+      "inLanguage": "es",
+      "author": {
+        "@type": "Organization",
+        "name": "NodoBots"
+      },
+      "datePublished": "2026-09"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Bot de WhatsApp para peluquerías: cómo llenar tu agenda sin coger el teléfono",
+      "description": "Descubre cómo un bot de WhatsApp puede gestionar tus citas, reducir los no-shows y atender clientes a las 3 de la madrugada sin que toques el móvil.",
+      "url": "https://nodobots.com/bot-whatsapp-peluqueria.html",
+      "inLanguage": "es",
+      "author": {
+        "@type": "Organization",
+        "name": "NodoBots"
+      },
+      "datePublished": "2026-06"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Bot de WhatsApp para fisioterapeutas: que el móvil deje de sonar en consulta",
+      "description": "Cómo un bot gestiona tus citas, manda recordatorios y contesta pacientes mientras estás en consulta. Sin complicaciones, sin líos.",
+      "url": "https://nodobots.com/bot-whatsapp-fisioterapia.html",
+      "inLanguage": "es",
+      "author": {
+        "@type": "Organization",
+        "name": "NodoBots"
+      },
+      "datePublished": "2026-07"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Bot de WhatsApp para clínicas dentales: agenda llena sin coger el teléfono",
+      "description": "Un paciente con dolor busca \"dentista urgencias\" un domingo a las 23:00. Así es como un bot responde primero, agenda la urgencia y reduce las ausencias.",
+      "url": "https://nodobots.com/bot-whatsapp-dentistas.html",
+      "inLanguage": "es",
+      "author": {
+        "@type": "Organization",
+        "name": "NodoBots"
+      },
+      "datePublished": "2026-09"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Bot de WhatsApp para restaurantes: reservas automáticas por WhatsApp",
+      "description": "Tu bot recibe reservas de mesa, confirma disponibilidad y avisa al equipo. Sin llamadas perdidas en hora punta.",
+      "url": "https://nodobots.com/restaurantes.html",
+      "inLanguage": "es",
+      "author": {
+        "@type": "Organization",
+        "name": "NodoBots"
+      },
+      "datePublished": "2026-07"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Bot de WhatsApp para talleres mecánicos: citas de ITV y revisiones sin líos",
+      "description": "Gestiona citas de ITV, cambios de aceite y revisiones desde WhatsApp. El cliente escribe, el bot agenda.",
+      "url": "https://nodobots.com/talleres.html",
+      "inLanguage": "es",
+      "author": {
+        "@type": "Organization",
+        "name": "NodoBots"
+      },
+      "datePublished": "2026-07"
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<a href="#contenido" class="skip-link">Saltar al contenido</a>
 
 <!-- NAVBAR -->
 <nav>
@@ -171,7 +274,7 @@
   <div class="nav-actions">
     <a href="index.html#contacto" class="btn-primary">Solicitar demo →</a>
   </div>
-  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="mobile-menu" id="mobile-menu">
@@ -187,6 +290,7 @@
 </div>
 
 <!-- HERO -->
+<main id="contenido" tabindex="-1">
 <section id="blog-hero">
   <div class="hero-badge"><span class="dot"></span> Blog & Recursos · NodoBots</div>
   <h1 class="hero-h1">Recursos para<br><span class="grad-text">automatizar tu negocio</span></h1>
@@ -326,6 +430,8 @@
 </section>
 
 <!-- FOOTER -->
+</main>
+
 <footer>
   <div class="container">
     <div class="footer-top">

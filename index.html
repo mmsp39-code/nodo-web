@@ -1585,8 +1585,10 @@
     }
 
   </style>
+<style>.skip-link{position:absolute;left:-9999px;top:8px;z-index:100000;background:#fff;color:#000;padding:10px 16px;border-radius:8px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none}.skip-link:focus{left:12px;outline:3px solid #38bdf8;outline-offset:2px}main#contenido:focus{outline:none}</style>
 </head>
 <body>
+<a href="#contenido" class="skip-link">Saltar al contenido</a>
 
 <!-- ═══════════════════════════════════════
      NAVBAR
@@ -1640,6 +1642,7 @@
 <!-- ═══════════════════════════════════════
      HERO
 ════════════════════════════════════════ -->
+<main id="contenido" tabindex="-1">
 <section id="hero">
   <div class="hero-logo-wrap">
     <img src="nodobots-logo.png" alt="NodoBots – Bots con inteligencia artificial para negocios locales: talleres, bares, peluquerías, restaurantes, clínicas y más. Valencia, España" class="hero-logo-img">
@@ -1976,7 +1979,7 @@
           <div class="msg bot">¡Hola! Soy el asistente virtual de este negocio. Puedo ayudarte a reservar cita, consultar horarios o resolver dudas. ¿En qué te puedo ayudar?</div>
         </div>
         <div class="panel-input-row">
-          <input class="panel-input" id="panel-input" type="text" placeholder="Escribe un mensaje..." maxlength="200" autocomplete="off">
+          <input class="panel-input" id="panel-input" type="text" aria-label="Escribe un mensaje al asistente de la demo" placeholder="Escribe un mensaje..." maxlength="200" autocomplete="off">
           <button class="panel-send" id="panel-send">➤</button>
         </div>
       </div>
@@ -2436,11 +2439,11 @@
 
     <form id="contact-form" style="max-width:420px; margin:0 auto; display:flex; flex-direction:column; gap:1rem;" class="reveal">
       <div>
-        <label style="display:block; font-size:0.8rem; color:var(--text2); margin-bottom:6px;">Nombre *</label>
+        <label for="f-nombre" style="display:block; font-size:0.8rem; color:var(--text2); margin-bottom:6px;">Nombre *</label>
         <input id="f-nombre" type="text" required placeholder="Tu nombre" style="width:100%; background:rgba(28,28,40,0.6); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:12px 14px; color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.9rem; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(139,92,246,0.4)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'">
       </div>
       <div>
-        <label style="display:block; font-size:0.8rem; color:var(--text2); margin-bottom:6px;">WhatsApp *</label>
+        <label for="f-telefono" style="display:block; font-size:0.8rem; color:var(--text2); margin-bottom:6px;">WhatsApp *</label>
         <input id="f-telefono" type="tel" required placeholder="600 000 000" style="width:100%; background:rgba(28,28,40,0.6); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:12px 14px; color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.9rem; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(139,92,246,0.4)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'">
       </div>
       <button type="submit" class="btn-full grad" style="margin-top:0.5rem; font-size:1rem; padding:14px;">Enviar solicitud →</button>
@@ -2453,6 +2456,8 @@
 <!-- ═══════════════════════════════════════
      FOOTER
 ════════════════════════════════════════ -->
+</main>
+
 <footer>
   <div class="container">
     <div class="footer-top">

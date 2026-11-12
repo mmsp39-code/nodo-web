@@ -1,0 +1,35 @@
+# NodoBots
+
+> NodoBots es una recepcionista virtual con IA y un servicio de automatización de tareas repetitivas para negocios locales de Alzira, la Ribera Alta, la Ribera Baixa y Valencia (Comunitat Valenciana, España). Contesta a los clientes por WhatsApp, reserva citas, manda recordatorios y automatiza avisos.
+
+NodoBots ofrece dos servicios:
+
+- Recepcionista virtual: atiende a los clientes de un negocio, responde las preguntas habituales (precios, horarios, plazos), gestiona citas y manda recordatorios.
+- Secretaria virtual: automatiza las tareas repetitivas del negocio.
+
+Servicios descritos en la web: recepcionista virtual con IA, contestador automático de WhatsApp, chatbot de WhatsApp, bot de Telegram, automatización para negocios locales, bot de reservas y citas, atención al cliente 24/7, bot de pedidos y delivery, recordatorios automáticos.
+
+Sectores con página propia: fisioterapia, clínicas dentales, peluquerías, restaurantes y talleres mecánicos. También hay un artículo para lavanderías y tintorerías.
+
+## Páginas principales
+
+- [Portada](https://nodobots.com/): qué hace NodoBots, demo en vivo, precios y preguntas frecuentes
+- [Fisioterapia](https://nodobots.com/fisios.html): recepcionista virtual para clínicas de fisioterapia en Alzira
+- [Clínicas dentales](https://nodobots.com/dentistas.html): recepcionista virtual para clínicas dentales en Alzira
+- [Peluquerías](https://nodobots.com/peluquerias.html): recepcionista virtual para peluquerías en Alzira
+- [Restaurantes](https://nodobots.com/restaurantes.html): recepcionista virtual para restaurantes en Alzira
+- [Talleres mecánicos](https://nodobots.com/talleres.html): recepcionista virtual para talleres en Alzira, Valencia y la Ribera Alta
+
+## Blog
+
+- [Blog](https://nodobots.com/blog.html): guías prácticas sobre recepcionista virtual con IA y contestador automático de WhatsApp
+- [Contestador automático de WhatsApp: qué hace gratis y qué no](https://nodobots.com/contestador-automatico-whatsapp.html)
+- [Bot de WhatsApp para peluquerías](https://nodobots.com/bot-whatsapp-peluqueria.html)
+- [Recepcionista virtual para fisios](https://nodobots.com/bot-whatsapp-fisioterapia.html)
+- [Recepcionista virtual para clínicas dentales](https://nodobots.com/bot-whatsapp-dentistas.html)
+- [Bot de WhatsApp para lavanderías y tintorerías](https://nodobots.com/bot-whatsapp-lavanderia.html)
+
+## Contacto
+
+- Correo: hola@nodobots.com
+- Solicitud de demo gratuita: https://nodobots.com/#contacto

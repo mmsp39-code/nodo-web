@@ -238,8 +238,10 @@
       .hero-ctas a{text-align:center}
     }
   </style>
+<style>.skip-link{position:absolute;left:-9999px;top:8px;z-index:100000;background:#fff;color:#000;padding:10px 16px;border-radius:8px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none}.skip-link:focus{left:12px;outline:3px solid #38bdf8;outline-offset:2px}main#contenido:focus{outline:none}</style>
 </head>
 <body>
+<a href="#contenido" class="skip-link">Saltar al contenido</a>
 
 <nav>
   <a href="https://nodobots.com/" class="nav-logo"><img src="nodobots-logo.png" alt="NodoBots"></a>
@@ -260,7 +262,7 @@
     <li><a href="index.html#contacto">Contacto</a></li>
   </ul>
   <a href="index.html#contacto" class="nav-cta">Demo gratuita &#8594;</a>
-  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="mobile-menu" id="mobile-menu">
@@ -273,6 +275,7 @@
   <a href="index.html#contacto">Contacto</a>
 </div>
 
+<main id="contenido" tabindex="-1">
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge"><span class="dot"></span> Cl&#237;nicas Dentales &#183; Alzira &amp; Valencia</div>
@@ -347,7 +350,7 @@
           <div class="msg user">Genial gracias!!</div>
         </div>
         <div class="chat-input">
-          <input type="text" placeholder="Escribe un mensaje..." disabled>
+          <input type="text" placeholder="Escribe un mensaje..." aria-label="Mensaje de ejemplo (demostración)" disabled>
           <button disabled>&#8594;</button>
         </div>
       </div>
@@ -467,6 +470,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="footer-inner">
