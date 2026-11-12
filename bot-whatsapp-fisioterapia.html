@@ -160,7 +160,47 @@
     }
   </style>
 <script>try{var m=location.search.match(/[?&]interno=([01])/);if(m)localStorage.setItem('nb_interno',m[1]);if(localStorage.getItem('nb_interno')==='1')window['ga-disable-G-TT2LZB7ZVK']=true;}catch(e){}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-TT2LZB7ZVK"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TT2LZB7ZVK');</script>
-<style>.skip-link{position:absolute;left:-9999px;top:8px;z-index:100000;background:#fff;color:#000;padding:10px 16px;border-radius:8px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none}.skip-link:focus{left:12px;outline:3px solid #38bdf8;outline-offset:2px}main#contenido:focus{outline:none}</style>
+<style>.skip-link{position:absolute;left:-9999px;top:8px;z-index:100000;background:#fff;color:#000;padding:10px 16px;border-radius:8px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none}.skip-link:focus{left:12px;outline:3px solid #38bdf8;outline-offset:2px}main#contenido:focus{outline:none}nav.toc{position:static}.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0}.table-scroll .compare-table{margin:0}.hamburger{min-width:44px;min-height:44px;align-items:center;justify-content:center}.mobile-menu{max-height:calc(100vh - 70px);max-height:calc(100dvh - 70px);overflow-y:auto;overscroll-behavior:contain}.mobile-menu a:not(.btn-primary){min-height:40px;display:flex;align-items:center}.nb-navbtn{display:none;background:none;border:0;cursor:pointer;min-width:44px;min-height:44px;flex-direction:column;align-items:center;justify-content:center;margin-left:4px;padding:0}.nb-navbtn span{display:block;width:22px;height:2px;background:var(--color-text,#1f2937);border-radius:2px;margin:2.5px 0}@media(max-width:640px){.nb-navbtn{display:inline-flex}.nav-inner .nav-cta{margin-left:auto}nav.nb-open .nav-links{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--color-border,#e5e7eb);padding:8px 24px 16px}nav.nb-open .nav-links a{display:flex;align-items:center;min-height:44px;font-size:16px}}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿El bot hace diagnósticos o gestiona urgencias?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Si alguien describe síntomas, puede sugerir una valoración inicial, pero no le dice qué tiene. Tampoco gestiona urgencias médicas: para eso hay otros canales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué hace el bot por mi clínica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gestiona citas con tu Google Calendar en tiempo real, contesta lo de siempre (precios, horarios, dirección, qué traer a la primera sesión, si aceptáis mutua) y manda recordatorios 24 y 2 horas antes. Si alguien cancela, el hueco se libera solo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si hay algo que el bot no puede resolver?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Te avisa y tú tomas el relevo. Siempre tienes el control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Reduce las ausencias de pacientes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los estudios sobre recordatorios automáticos en citas sanitarias muestran reducciones medias de en torno al 30 % en las ausencias (Hasvold y Wootton, 2011, sobre citas hospitalarias). No es una cifra garantizada para cada clínica."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a href="#contenido" class="skip-link">Saltar al contenido</a>
@@ -207,6 +247,7 @@
       <li><a href="#ejemplo">Así se ve una conversación del bot</a></li>
       <li><a href="#comparativa">Bot vs lo que estás haciendo ahora</a></li>
       <li><a href="#empezar">Cómo se monta esto en tu clínica</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
     </ol>
   </nav>
 
@@ -343,7 +384,7 @@
 
     <p>Probablemente estés gestionando las citas de una de estas formas. Aquí va una comparación sin adornos.</p>
 
-    <table class="compare-table">
+    <div class="table-scroll" role="region" aria-label="Tabla comparativa: desliza hacia los lados para verla entera" tabindex="0"><table class="compare-table">
       <thead>
         <tr>
           <th></th>
@@ -390,7 +431,7 @@
           <td class="tick">✓ Sí</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <p>No se trata de elegir entre un bot y una persona. Si tienes recepcionista, el bot le quita la carga de los mensajes fuera de horario y los recordatorios. Si no tienes recepcionista — que es el caso de muchos fisios autónomos — el bot cubre ese hueco a una fracción del coste.</p>
 
@@ -439,6 +480,16 @@
       </div>
     </div>
 
+
+    <h2 id="faq">Preguntas frecuentes</h2>
+    <h3>¿El bot hace diagnósticos o gestiona urgencias?</h3>
+    <p>No. Si alguien describe síntomas, puede sugerir una valoración inicial, pero no le dice qué tiene. Tampoco gestiona urgencias médicas: para eso hay otros canales.</p>
+    <h3>¿Qué hace el bot por mi clínica?</h3>
+    <p>Gestiona citas con tu Google Calendar en tiempo real, contesta lo de siempre (precios, horarios, dirección, qué traer a la primera sesión, si aceptáis mutua) y manda recordatorios 24 y 2 horas antes. Si alguien cancela, el hueco se libera solo.</p>
+    <h3>¿Y si hay algo que el bot no puede resolver?</h3>
+    <p>Te avisa y tú tomas el relevo. Siempre tienes el control.</p>
+    <h3>¿Reduce las ausencias de pacientes?</h3>
+    <p>Los estudios sobre recordatorios automáticos en citas sanitarias muestran reducciones medias de en torno al 30 % en las ausencias (Hasvold y Wootton, 2011, sobre citas hospitalarias). No es una cifra garantizada para cada clínica.</p>
   </div>
 
   <div class="cta-block">
@@ -461,6 +512,7 @@
   <p style="text-align:center;font-size:.8rem;margin:1rem 0 0"><a href="/#aviso-legal" style="color:inherit;opacity:.7;text-decoration:none">Aviso legal</a> · <a href="/#privacidad" style="color:inherit;opacity:.7;text-decoration:none">Privacidad</a> · <a href="/#cookies" style="color:inherit;opacity:.7;text-decoration:none">Cookies</a></p>
 </footer>
 
+<script src="/nodo-nav.js" defer></script>
 <script src="/nodo-chat.js" defer></script>
 </body>
 </html>

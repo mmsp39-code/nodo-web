@@ -387,7 +387,47 @@
     }
   </style>
 <script>try{var m=location.search.match(/[?&]interno=([01])/);if(m)localStorage.setItem('nb_interno',m[1]);if(localStorage.getItem('nb_interno')==='1')window['ga-disable-G-TT2LZB7ZVK']=true;}catch(e){}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-TT2LZB7ZVK"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TT2LZB7ZVK');</script>
-<style>.skip-link{position:absolute;left:-9999px;top:8px;z-index:100000;background:#fff;color:#000;padding:10px 16px;border-radius:8px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none}.skip-link:focus{left:12px;outline:3px solid #38bdf8;outline-offset:2px}main#contenido:focus{outline:none}</style>
+<style>.skip-link{position:absolute;left:-9999px;top:8px;z-index:100000;background:#fff;color:#000;padding:10px 16px;border-radius:8px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none}.skip-link:focus{left:12px;outline:3px solid #38bdf8;outline-offset:2px}main#contenido:focus{outline:none}nav.toc{position:static}.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0}.table-scroll .compare-table{margin:0}.hamburger{min-width:44px;min-height:44px;align-items:center;justify-content:center}.mobile-menu{max-height:calc(100vh - 70px);max-height:calc(100dvh - 70px);overflow-y:auto;overscroll-behavior:contain}.mobile-menu a:not(.btn-primary){min-height:40px;display:flex;align-items:center}.nb-navbtn{display:none;background:none;border:0;cursor:pointer;min-width:44px;min-height:44px;flex-direction:column;align-items:center;justify-content:center;margin-left:4px;padding:0}.nb-navbtn span{display:block;width:22px;height:2px;background:var(--color-text,#1f2937);border-radius:2px;margin:2.5px 0}@media(max-width:640px){.nb-navbtn{display:inline-flex}.nav-inner .nav-cta{margin-left:auto}nav.nb-open .nav-links{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--color-border,#e5e7eb);padding:8px 24px 16px}nav.nb-open .nav-links a{display:flex;align-items:center;min-height:44px;font-size:16px}}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué puede hacer el bot en una peluquería?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gestiona citas consultando tu Google Calendar en tiempo real, responde las preguntas habituales (precios, horarios, ubicación, servicios y duración de cada uno) y manda recordatorios 24 y 2 horas antes con opción de confirmar o cancelar. Si alguien cancela, el hueco se libera en tu agenda."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué no hace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No decide si una clienta necesita un color especial que requiere consulta previa, no gestiona situaciones complejas o emocionales y no reemplaza el contacto humano cuando hace falta. En esos casos la conversación puede pasar a ti o a tu equipo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Reduce las citas a las que la clienta no se presenta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los estudios sobre recordatorios automáticos en citas sanitarias muestran reducciones medias de en torno al 30 % en las ausencias (Hasvold y Wootton, 2011, sobre citas hospitalarias; no son datos de peluquerías). No es una cifra garantizada para cada negocio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto se tarda en ponerlo en marcha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unos 5 a 7 días. Empezamos con una videollamada de 30 minutos para conocer tu negocio, conectamos el bot a tu WhatsApp Business y a tu Google Calendar, y ajustamos las primeras conversaciones contigo."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a href="#contenido" class="skip-link">Saltar al contenido</a>
@@ -438,6 +478,7 @@
       <li><a href="#ejemplo">Ejemplo de conversación: así gestiona el bot una cita</a></li>
       <li><a href="#comparativa">Bot vs alternativas: comparativa honesta</a></li>
       <li><a href="#empezar">Cómo empezar sin complicaciones</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
     </ol>
   </nav>
 
@@ -576,7 +617,7 @@
 
     <p>Antes de decidir si un bot es para ti, merece la pena compararlo con lo que probablemente ya estás usando o has considerado.</p>
 
-    <table class="compare-table">
+    <div class="table-scroll" role="region" aria-label="Tabla comparativa: desliza hacia los lados para verla entera" tabindex="0"><table class="compare-table">
       <thead>
         <tr>
           <th>Característica</th>
@@ -629,7 +670,7 @@
           <td>Medio</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <p>La app de reservas parece la solución obvia hasta que te das cuenta de que muchos clientes no van a descargar una app nueva solo para reservar en una peluquería. WhatsApp ya lo tienen. La barrera de entrada es cero.</p>
 
@@ -679,6 +720,16 @@
       </div>
     </div>
 
+
+    <h2 id="faq">Preguntas frecuentes</h2>
+    <h3>¿Qué puede hacer el bot en una peluquería?</h3>
+    <p>Gestiona citas consultando tu Google Calendar en tiempo real, responde las preguntas habituales (precios, horarios, ubicación, servicios y duración de cada uno) y manda recordatorios 24 y 2 horas antes con opción de confirmar o cancelar. Si alguien cancela, el hueco se libera en tu agenda.</p>
+    <h3>¿Qué no hace?</h3>
+    <p>No decide si una clienta necesita un color especial que requiere consulta previa, no gestiona situaciones complejas o emocionales y no reemplaza el contacto humano cuando hace falta. En esos casos la conversación puede pasar a ti o a tu equipo.</p>
+    <h3>¿Reduce las citas a las que la clienta no se presenta?</h3>
+    <p>Los estudios sobre recordatorios automáticos en citas sanitarias muestran reducciones medias de en torno al 30 % en las ausencias (Hasvold y Wootton, 2011, sobre citas hospitalarias; no son datos de peluquerías). No es una cifra garantizada para cada negocio.</p>
+    <h3>¿Cuánto se tarda en ponerlo en marcha?</h3>
+    <p>Unos 5 a 7 días. Empezamos con una videollamada de 30 minutos para conocer tu negocio, conectamos el bot a tu WhatsApp Business y a tu Google Calendar, y ajustamos las primeras conversaciones contigo.</p>
   </div><!-- /prose -->
 
   <!-- CTA -->
@@ -703,6 +754,7 @@
   <p style="text-align:center;font-size:.8rem;margin:1rem 0 0"><a href="/#aviso-legal" style="color:inherit;opacity:.7;text-decoration:none">Aviso legal</a> · <a href="/#privacidad" style="color:inherit;opacity:.7;text-decoration:none">Privacidad</a> · <a href="/#cookies" style="color:inherit;opacity:.7;text-decoration:none">Cookies</a></p>
 </footer>
 
+<script src="/nodo-nav.js" defer></script>
 <script src="/nodo-chat.js" defer></script>
 </body>
 </html>
