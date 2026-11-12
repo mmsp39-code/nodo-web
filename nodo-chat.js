@@ -100,6 +100,7 @@
     e.preventDefault();
     var txt = inp.value.trim(); if (!txt || ocupado) return;
     inp.value = ''; burbuja(txt, 'V');
+    if (!window.__nbChatEv) { window.__nbChatEv = 1; try { if (window.gtag) window.gtag('event', 'chat_mensaje', { pagina: location.pathname }); } catch (err) {} }
     var conv = historial.slice(-14).map(function (h) { return h.q + ': ' + h.t; }).join('\n');
     historial.push({ q: 'V', t: txt });
     ocupado = true; send.disabled = true;

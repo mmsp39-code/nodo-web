@@ -3033,6 +3033,8 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     })
   }).catch(function(){});
 
+  try { if (window.gtag) gtag('event', 'generate_lead', { formulario: 'demo_web' }); } catch (err) {}
+
   // Mostrar confirmación
   var msg = document.getElementById('form-msg');
   msg.style.display = 'block';
@@ -3437,7 +3439,7 @@ var _h={'#aviso-legal':'modal-legal','#privacidad':'modal-privacidad','#cookies'
 if(_h&&document.getElementById(_h)) openModal(_h);
 </script>
 
-<script src="/nodo-nav.js" defer></script>
+<script src="/nodo-nav.js" defer></script><script src="/nodo-eventos.js" defer></script>
 <script src="/nodo-chat.js" defer></script>
 </body>
 </html>
