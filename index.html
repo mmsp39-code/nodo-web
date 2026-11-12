@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <!-- Google Analytics -->
-  <script>try{var m=location.search.match(/[?&]interno=([01])/);if(m)localStorage.setItem('nb_interno',m[1]);if(localStorage.getItem('nb_interno')==='1')window['ga-disable-G-TT2LZB7ZVK']=true;}catch(e){}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-TT2LZB7ZVK"></script>
+  <script>try{var m=location.search.match(/[?&]interno=([01])/);if(m)localStorage.setItem('nb_interno',m[1]);if(localStorage.getItem('nb_interno')==='1')window['ga-disable-G-TT2LZB7ZVK']=true;}catch(e){}</script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -3033,7 +3033,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     })
   }).catch(function(){});
 
-  try { if (window.gtag) gtag('event', 'generate_lead', { formulario: 'demo_web' }); } catch (err) {}
+  try { if (window.nbTrack) window.nbTrack('generate_lead', { formulario: 'demo_web' }); } catch (err) {}
 
   // Mostrar confirmación
   var msg = document.getElementById('form-msg');
@@ -3439,7 +3439,7 @@ var _h={'#aviso-legal':'modal-legal','#privacidad':'modal-privacidad','#cookies'
 if(_h&&document.getElementById(_h)) openModal(_h);
 </script>
 
-<script src="/nodo-nav.js" defer></script><script src="/nodo-eventos.js" defer></script>
+<script src="/nodo-nav.js" defer></script><script src="/nodo-cookies.js" defer></script><script src="/nodo-eventos.js" defer></script>
 <script src="/nodo-chat.js" defer></script>
 </body>
 </html>

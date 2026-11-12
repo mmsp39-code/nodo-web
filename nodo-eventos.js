@@ -3,7 +3,7 @@
    Eventos: click_whatsapp, click_telefono, chat_mensaje (1 vez por visita). generate_lead se envía desde el formulario de index.html. */
 (function () {
   function ev(nombre, datos) {
-    try { if (window.gtag) window.gtag('event', nombre, datos || {}); } catch (e) {}
+    if (window.nbTrack) window.nbTrack(nombre, datos);
   }
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
