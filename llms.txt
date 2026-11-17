@@ -9,7 +9,7 @@ NodoBots ofrece dos servicios:
 
 Servicios descritos en la web: recepcionista virtual con IA, contestador automático de WhatsApp, chatbot de WhatsApp, bot de Telegram, automatización para negocios locales, bot de reservas y citas, atención al cliente 24/7, bot de pedidos y delivery, recordatorios automáticos.
 
-Sectores con página propia: fisioterapia, clínicas dentales, peluquerías, restaurantes y talleres mecánicos. También hay un artículo para lavanderías y tintorerías.
+Sectores con página propia: fisioterapia, clínicas dentales, peluquerías, restaurantes y talleres mecánicos. También hay artículos para lavanderías y tintorerías y para talleres mecánicos.
 
 ## Páginas principales
 
@@ -28,6 +28,7 @@ Sectores con página propia: fisioterapia, clínicas dentales, peluquerías, res
 - [Recepcionista virtual para fisios](https://nodobots.com/bot-whatsapp-fisioterapia.html)
 - [Recepcionista virtual para clínicas dentales](https://nodobots.com/bot-whatsapp-dentistas.html)
 - [Bot de WhatsApp para lavanderías y tintorerías](https://nodobots.com/bot-whatsapp-lavanderia.html)
+- [Bot de WhatsApp para talleres mecánicos](https://nodobots.com/bot-whatsapp-talleres-mecanicos.html)
 
 ## Contacto
 
